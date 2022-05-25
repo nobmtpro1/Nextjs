@@ -1,0 +1,106 @@
+
+.slick-account-page .slick-dots {
+}
+
+.slick-account-page .slick-dots li button::before {
+    width: 0.72vw;
+    height: 0.72vw;
+    border-radius: 100%;
+    background: rgba(249, 0, 59, 0.2);
+    content: "";
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+}
+
+.slick-account-page .slick-dots li.slick-active button::before {
+    width: 0.72vw;
+    height: 0.72vw;
+    border-radius: 100%;
+    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+    content: "";
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .slick-account-page .slick-dots {
+        bottom: -5vw;
+        gap: 0.5vw;
+    }
+
+    .slick-account-page .slick-dots li {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        width: 4vw;
+    }
+
+    .slick-account-page .slick-dots li button::before {
+        width: 2vw;
+        height: 2vw;
+    }
+
+    .slick-account-page .slick-dots li.slick-active button::before {
+        width: 2vw;
+        height: 2vw;
+    }
+}
+
+#account-elearning .slick-next {
+    left: 101%;
+    top: 50%;
+}
+
+#account-elearning .slick-next::before {
+    font-size: 2vw;
+    background: url("/images/main/slick-next.svg");
+    color: transparent;
+    font-size: 0;
+    display: block;
+    width: 1vw;
+    height: 1.5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#account-elearning .slick-prev {
+    left: -3%;
+    top: 50%;
+}
+
+#account-elearning .slick-prev::before {
+    font-size: 2vw;
+    background: url("/images/main/slick-prev.svg");
+    color: transparent;
+    font-size: 0;
+    display: block;
+    width: 1vw;
+    height: 1.5vw;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#account-elearning .slick-dots {
+    display: block !important;
+}
+
+#account-elearning .slick-dots li button::before {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 100%;
+    background: rgba(249, 0, 59, 0.2);
+    content: "";
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+}
+
+#account-elearning .slick-dots li.slick-active button::before {
+    width: 2vw;
+    height: 2vw;
+    border-radius: 100%;
+    background: linear-gradient(135deg, #e32068 0%, #b4969d 100%);
+    content: "";
+    opacity: 1;
+}

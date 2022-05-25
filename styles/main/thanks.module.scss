@@ -1,0 +1,130 @@
+@import "general";
+
+.thanks_page {
+    @include MB {
+        min-height: m(350);
+    }
+
+    min-height: p(810);
+    background: rgba(245, 245, 245, 1);
+
+    .box {
+        @include MB {
+            height: auto;
+            @include box-shadow;
+            border-radius: m(10);
+            padding: m(16);
+            background: white;
+            margin-left: m(15);
+            margin-right: m(15);
+            transform: translateY(m(95));
+        }
+
+        height: p(504);
+        @include box-shadow;
+        border-radius: p(10);
+        background: url("/images/main/cart-thanks-1.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        padding: p(57) p(75);
+        margin-left: p(335);
+        margin-right: p(315);
+        transform: translateY(p(225));
+
+        .row1 {
+            @include MB {
+                font-size: m(20);
+                line-height: m(23);
+            }
+
+            font-weight: bold;
+            font-size: p(60);
+            line-height: p(70);
+            color: #f9003b;
+        }
+
+        .row2 {
+            @include MB {
+                font-size: m(12);
+                line-height: 130%;
+                width: 100%;
+                margin-top: m(12);
+            }
+
+            font-weight: normal;
+            font-size: p(20);
+            line-height: p(23);
+            width: p(553);
+            margin-top: p(15);
+        }
+
+        .form {
+            @include MB {
+                margin-top: m(11);
+                width: 100%;
+            }
+
+            margin-top: p(35);
+            width: p(376);
+
+            .input {
+                @include MB {
+                    margin-bottom: m(8);
+                }
+
+                position: relative;
+                margin-bottom: p(12);
+
+                input,
+                select {
+                    @include MB {
+                        font-size: m(14);
+                        line-height: m(16);
+                        padding-left: m(20);
+                        padding-right: m(20);
+                        height: m(48);
+                        border-radius: m(5);
+                    }
+
+                    width: 100%;
+                    height: p(48);
+                    border-radius: p(5);
+                    background: #efefef;
+                    border: none;
+                    font-weight: normal;
+                    font-size: p(16);
+                    line-height: p(19);
+                    padding-left: p(20);
+                    padding-right: p(20);
+                }
+
+                .placeholder {
+                    @include MB {
+                        font-size: m(14);
+                        line-height: m(16);
+                        left: m(20);
+                    }
+
+                    font-weight: normal;
+                    font-size: p(16);
+                    line-height: p(19);
+                    position: absolute;
+                    top: 50%;
+                    left: p(20);
+                    transform: translateY(-50%);
+                    pointer-events: none;
+
+                    &.hide {
+                        display: none;
+                    }
+
+                    span {
+                        @include text-gradient;
+                    }
+                }
+            }
+        }
+    }
+}

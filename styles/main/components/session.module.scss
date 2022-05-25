@@ -1,0 +1,189 @@
+@use "sass:math";
+@import "../general";
+
+.product {
+    @include MB {
+        width: m(187);
+        padding: m(5);
+        border-radius: m(10);
+        padding-bottom: m(11);
+        margin-right: 0;
+    }
+
+    width: p(185);
+    padding: p(5);
+    @include box-shadow;
+    border-radius: p(10);
+    padding-bottom: p(9);
+    background: white;
+
+    & > .image {
+        img {
+            @include MB {
+                border-radius: m(10);
+            }
+            border-radius: p(10);
+        }
+    }
+
+    .name {
+        @include MB {
+            font-weight: bold;
+            font-size: m(16);
+            line-height: m(19);
+            margin-top: m(2);
+        }
+        font-weight: 500;
+        font-size: p(16);
+        line-height: p(19);
+        margin-top: p(2);
+    }
+
+    .category {
+        @include MB {
+            margin-top: m(7);
+        }
+
+        line-height: 0;
+        margin-top: p(7);
+
+        .text {
+            @include MB {
+                margin-bottom: m(4);
+            }
+
+            margin-bottom: p(4);
+            span {
+                @include MB {
+                    font-size: m(8);
+                    line-height: m(9);
+                    padding: m(3) m(13);
+                    border-radius: m(5);
+                }
+
+                font-weight: 500;
+                font-size: p(8);
+                line-height: p(9);
+                display: inline-block;
+                padding: p(3) p(13);
+                background: linear-gradient(90deg, rgba(227, 32, 104, 0.5) 2.44%, rgba(245, 0, 59, 0.5) 100%);
+                border-radius: p(5);
+                color: white;
+                position: relative;
+
+                &::before {
+                    @include MB {
+                        width: m(4);
+                        height: m(4);
+                        top: m(5);
+                        left: m(5);
+                    }
+
+                    position: absolute;
+                    content: "";
+                    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                    width: p(4);
+                    height: p(4);
+                    top: p(5);
+                    left: p(5);
+                    border-radius: 150%;
+                }
+            }
+        }
+    }
+
+    .description {
+        @include MB {
+            font-size: m(10);
+            line-height: m(12);
+            margin-top: m(4);
+            font-weight: 300;
+        }
+
+        font-weight: 300;
+        font-size: p(10);
+        line-height: p(12);
+        color: #343846;
+        margin-top: p(4);
+    }
+
+    .info {
+        @include MB {
+            gap: m(7);
+            font-size: m(7);
+            line-height: m(9);
+            margin-top: m(4);
+        }
+
+        display: flex;
+        gap: p(7);
+        align-items: center;
+        font-size: p(8);
+        line-height: p(9);
+        color: #343846;
+        margin-top: p(4);
+
+        .text {
+            transform: translateY(p(2));
+        }
+
+        .date {
+            @include MB {
+                gap: m(5);
+            }
+
+            display: flex;
+            gap: p(5);
+            align-items: center;
+
+            .image {
+                @include MB {
+                    width: m(8);
+                }
+
+                width: p(8);
+            }
+        }
+
+        .user {
+            @include MB {
+                gap: m(5);
+            }
+            display: flex;
+            gap: p(5);
+            align-items: center;
+
+            .image {
+                @include MB {
+                    width: m(5);
+                }
+                width: p(6.5);
+            }
+        }
+
+        .rate {
+            @include MB {
+                gap: m(1);
+            }
+
+            display: flex;
+            gap: p(1);
+            align-items: center;
+
+            .image {
+                @include MB {
+                    width: m(8);
+                }
+                width: p(8);
+            }
+
+            .text {
+                @include MB {
+                    margin-left: m(5);
+                }
+
+                margin-left: p(5);
+            }
+        }
+    }
+}

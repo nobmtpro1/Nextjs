@@ -1,0 +1,21 @@
+{
+    "short_name": "AIM E-LEARNING",
+    "name": "AIM E-LEARNING",
+    "icons": [
+      {
+        "src": "/images/icon192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/images/icon192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "/?utm_source=a2hs",
+    "background_color": "#f5f5f5",
+    "display": "standalone",
+    "theme_color": "#f5f5f5"
+  }
+  

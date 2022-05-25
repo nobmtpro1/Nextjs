@@ -1,0 +1,327 @@
+@import "general";
+
+.profile {
+    .title {
+        @include MB {
+            font-size: 4.83vw;
+            margin-bottom: 1.69vw;
+            margin-top: 0;
+        }
+
+        font-size: 2.5vw;
+        font-weight: 500;
+        margin-top: 2.13vw;
+        margin-bottom: 0.83vw;
+    }
+
+    .description {
+        @include MB {
+            font-size: 2.89vw;
+            margin-bottom: 4.1vw;
+        }
+
+        font-size: 1.04vw;
+        font-weight: 300;
+        margin-bottom: 1.35vw;
+    }
+
+    .boxes {
+        @include MB {
+            flex-direction: column;
+        }
+
+        display: flex;
+        gap: 1.45vw;
+
+        .left,
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 1.45vw;
+
+            .box {
+                @include MB {
+                    padding: 5.2vw 4.83vw;
+                    border-radius: 2.41vw;
+                    padding-bottom: 1vw;
+                    padding-top: 6vw;
+                }
+
+                @include box-shadow;
+                border-radius: 0.52vw;
+                padding: 1.97vw;
+                background: white;
+
+                .top {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .box_title {
+                        @include MB {
+                            font-size: 4.83vw;
+                            @include text-gradient;
+                        }
+
+                        font-size: 2.5vw;
+                        font-weight: 500;
+                    }
+
+                    .box_dot {
+                        @include MB {
+                            width: 6.76vw;
+                            height: 6.76vw;
+                        }
+
+                        width: 2.08vw;
+                        height: 2.08vw;
+                        cursor: pointer;
+                        position: relative;
+                        .popup_container {
+                            @include MB {
+                                width: 34.05vw;
+                                height: 11.59vw;
+                                border-radius: 2.41vw;
+                                font-size: 3.86vw;
+                            }
+
+                            &.show {
+                                display: flex !important;
+                            }
+                            display: none !important;
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            width: 7.34vw;
+                            height: 2.5vw;
+                            background: rgba(52, 56, 70, 1);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color: white;
+                            font-size: 0.83vw;
+                            font-weight: 500;
+                            @include box-shadow;
+                            border-radius: 0.52vw;
+                        }
+                    }
+                }
+
+                .bot {
+                    @include MB {
+                        gap: 3.86vw;
+                        margin-top: 6.52vw;
+                    }
+
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    gap: 0.83vw;
+                    margin-top: 1.875vw;
+
+                    .button_delete {
+                        display: flex;
+                        justify-content: flex-end;
+
+                        button {
+                            @include MB {
+                                font-size: 3vw;
+                                border-radius: 0.8vw;
+                            }
+
+                            font-size: 0.83vw;
+                            background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                            border: none;
+                            border-radius: 0.25vw;
+                            color: white;
+                        }
+                    }
+
+                    .input_group {
+                        position: relative;
+
+                        .placeholder {
+                            @include MB {
+                                font-size: 3.86vw;
+                                top: 3vw;
+                                left: 2.41vw;
+                            }
+
+                            position: absolute;
+                            font-size: 0.83vw;
+                            top: 0.88vw;
+                            left: 1.14vw;
+
+                            &.hide {
+                                display: none;
+                            }
+                        }
+
+                        .input {
+                            @include MB {
+                                height: 11.6vw;
+                                border-radius: 1.2vw;
+                                font-size: 3.86vw;
+                                padding: 0.88vw 2.41vw;
+                            }
+
+                            width: 100%;
+                            height: 2.5vw;
+                            background: #efefef;
+                            border-radius: 0.26vw;
+                            border: none;
+                            font-size: 0.83vw;
+                            padding: 0.88vw 1.14vw;
+
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+
+                        &.textarea {
+                            margin-bottom: 0;
+                            textarea {
+                                @include MB {
+                                    height: 88.64vw;
+                                }
+                                height: 19.11vw;
+                                resize: none;
+                            }
+
+                            &.small {
+                                textarea {
+                                    @include MB {
+                                        height: 29.95vw !important;
+                                    }
+                                    height: 6.45vw !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .input_group_container {
+                        @include MB {
+                            gap: 1.93vw;
+                        }
+
+                        display: flex;
+                        justify-content: flex-start;
+                        gap: 0.572vw;
+
+                        & .input_group {
+                            width: 24%;
+                            &:nth-child(1) {
+                                width: 50%;
+                                &::after {
+                                    display: none;
+                                }
+                            }
+                            .input,
+                            .input_select {
+                                @include MB {
+                                    height: 11.59vw;
+                                    font-size: 3.86vw;
+                                    border-radius: 1.2vw;
+                                }
+
+                                width: 100%;
+                                height: 2.5vw;
+                                background: #efefef;
+                                border-radius: 0.26vw;
+                                border: none;
+                                font-size: 0.83vw;
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                            &:after {
+                                @include MB {
+                                    width: 1.69vw;
+                                    height: 1.69vw;
+                                    right: 2.14vw;
+                                }
+                                position: absolute;
+                                content: "";
+                                width: 0.41vw;
+                                height: 0.45vw;
+                                top: 50%;
+                                right: 1.14vw;
+                                background: url("/images/account-header-dropdown-black.svg");
+                                background-size: contain;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                transform: translateY(-50%);
+                            }
+
+                            .input_select {
+                                @include MB {
+                                    padding-left: 2.14vw;
+                                }
+                                padding-left: 1.14vw;
+                                -moz-appearance: none; /* Firefox */
+                                -webkit-appearance: none; /* Safari and Chrome */
+                                appearance: none;
+                                position: relative;
+                            }
+                        }
+                    }
+
+                    .policy {
+                        @include MB {
+                            font-size: 2.41vw;
+                            margin-top: 0vw;
+                            transform: translateY(-2.5vw);
+                        }
+
+                        margin-top: 0.3vw;
+                        font-size: 0.625vw;
+
+                        .link {
+                            @include text-gradient;
+                        }
+                    }
+
+                    .button {
+                        @include MB {
+                            flex-direction: column;
+                            transform: translateY(-4.5vw);
+                            gap: 1.83vw;
+                        }
+
+                        display: flex;
+                        gap: 0.83vw;
+                        button {
+                            @include MB {
+                                width: 100%;
+                                height: 8.69vw;
+                                font-size: 3.86vw;
+                                border-radius: 1.2vw;
+                                font-weight: 500;
+                                margin-top: 0;
+                            }
+
+                            margin-top: 0.5vw;
+                            width: 11.875vw;
+                            height: 2.5vw;
+                            background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                            border: none;
+                            border-radius: 0.52vw;
+                            color: white;
+                            font-size: 1.04vw;
+                            font-weight: bold;
+
+                            &:nth-child(2) {
+                                background: white;
+                                @include text-gradient;
+                                border: 0.052vw solid #f9003b;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

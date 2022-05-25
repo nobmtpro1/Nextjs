@@ -1,0 +1,115 @@
+@import "../general";
+
+.popup_discussion {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+
+    &.active {
+        display: flex;
+    }
+
+    & > .box {
+        @include MB {
+            width: m(305);
+            height: m(160);
+            border-radius: m(15);
+            padding: m(10) m(15);
+            position: relative;
+        }
+
+        width: p(550);
+        height: p(265);
+        border-radius: p(10);
+        @include box-shadow;
+        background: #f5f5f5;
+        padding: p(23) p(30);
+        padding-bottom: p(41);
+
+        & > .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & > .text {
+                @include MB {
+                    font-size: m(18);
+                    line-height: m(20);
+                }
+                font-weight: 500;
+                font-size: p(24);
+                line-height: p(28);
+                @include text-gradient;
+            }
+
+            & > .close {
+                @include MB {
+                    width: m(18);
+                }
+
+                width: p(20);
+                cursor: pointer;
+                img {
+                    @include MB {
+                        transform: translateY(-15%);
+                    }
+                    transform: translateY(-25%);
+                }
+            }
+        }
+
+        & > .content {
+            @include MB {
+                font-size: m(12);
+                line-height: m(15);
+                margin-top: m(20);
+                margin-bottom: m(20);
+            }
+
+            margin-top: p(37);
+            font-weight: 300;
+            font-size: p(20);
+            line-height: p(23);
+            margin-bottom: p(31);
+        }
+
+        & > .images {
+            @include MB {
+                gap: m(20);
+            }
+            display: flex;
+            gap: p(24);
+            align-items: center;
+
+            img {
+                width: 95%;
+            }
+
+            & > .image {
+                @include MB {
+                    width: m(35);
+                }
+                width: p(53);
+                cursor: pointer;
+            }
+
+            & > .image:nth-child(2) {
+                @include MB {
+                    width: m(30);
+                }
+                width: p(45);
+            }
+
+            & > .image:nth-child(3) {
+                @include MB {
+                    width: m(22);
+                }
+                width: p(36);
+            }
+        }
+    }
+}

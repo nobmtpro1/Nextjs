@@ -1,0 +1,497 @@
+@import "general";
+
+.banner {
+    @include PC {
+        display: none !important;
+    }
+}
+.view_public_page {
+    .download {
+        @include MB {
+            justify-content: space-between;
+            align-items: center;
+        }
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-top: 0.5vw;
+
+        .left {
+            @include PC {
+                display: none;
+            }
+
+            align-self: flex-start;
+            font-size: 4.83vw;
+            font-weight: 500;
+        }
+
+        a {
+            @include MB {
+                width: 33.33vw;
+                height: 8.69vw;
+                border-radius: 1.2vw;
+                font-size: 3.86vw;
+                gap: 2vw;
+            }
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 11.87vw;
+            height: 2.5vw;
+            background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+            border-radius: 0.52vw;
+            color: white;
+            font-size: 1.04vw;
+            font-weight: 500;
+            gap: 0.3vw;
+
+            .image {
+                @include MB {
+                    width: 3.38vw;
+                }
+                width: 0.93vw;
+
+                img {
+                    transform: translateY(-0.2vw);
+                }
+            }
+        }
+    }
+
+    .contain {
+        @include MB {
+            padding: 2vw;
+        }
+
+        padding: 1vw;
+    }
+
+    .info {
+        @include MB {
+            flex-wrap: wrap;
+            gap: 0;
+            margin-top: 7.72vw;
+        }
+
+        display: flex;
+        gap: 1.56vw;
+        // height: 12.08vw;
+        height: auto;
+        margin-top: 1.04vw;
+
+        .avatar {
+            @include MB {
+                width: 26.77vw;
+                height: 26.77vw;
+                padding-right: 5.31vw;
+                img {
+                    width: 21.77vw !important; 
+                    height: 21.77vw !important; 
+                }
+            }
+
+            width: 12.23vw;
+            height: 12.23vw;
+            padding-right: 0.9vw;
+            img {
+                border-radius: 100%;
+                width: 12.23vw;
+                height: 12.23vw;
+            }
+        }
+
+        .personal {
+            @include MB {
+                width: 64.49vw;
+                border-radius: 2.41vw;
+                padding: 4.34vw;
+                padding-bottom: 0.5vw;
+                padding-top: 1.5vw;
+            }
+
+            width: 19.01vw;
+            @include box-shadow;
+            background: white;
+            padding: 1.82vw;
+            padding-top: 1vw;
+            border-radius: 0.52vw;
+
+            .name {
+                @include MB {
+                    font-size: 5.79vw;
+                    margin-bottom: 0.5vw;
+                }
+
+                font-size: 1.77vw;
+                font-weight: 500;
+                margin-bottom: 1vw;
+                color: #ed0e4e;
+            }
+
+            .small {
+                @include MB {
+                    font-size: 2.89vw;
+                    gap: 2.65vw;
+                    margin-bottom: 1vw;
+                }
+
+                display: flex;
+                gap: 0.729vw;
+                font-size: 0.83vw;
+                margin-bottom: 0.3vw;
+                font-weight: 300;
+
+                .image {
+                    @include MB {
+                        width: 2.63vw;
+                    }
+
+                    width: 0.83vw;
+                    transform: translateY(-0.1vw);
+                }
+            }
+        }
+
+        .description {
+            @include MB {
+                width: 100%;
+                border-radius: 2.41vw;
+                margin-top: 3.86vw;
+            }
+
+            flex: 1;
+            @include box-shadow;
+            background: white;
+            border-radius: 0.52vw;
+
+            .title {
+                @include MB {
+                    height: 13.04vw;
+                    font-size: 4.83vw;
+                    gap: 6.52vw;
+                    padding: 3.62vw 8.45vw;
+                    border-bottom: 0.24vw dashed #000000;
+                }
+
+                height: 2.91vw;
+                padding: 1.35vw;
+                display: flex;
+                align-items: center;
+                gap: 1.4vw;
+                border-bottom: 0.052vw dashed #000000;
+                font-size: 1.04vw;
+                font-weight: bold;
+
+                .image {
+                    @include MB {
+                        width: 4.43vw;
+                    }
+
+                    width: 0.95vw;
+                }
+
+                .text {
+                    transform: translateY(0.2vw);
+                }
+            }
+
+            .content {
+                @include MB {
+                    font-size: 3.86vw;
+                    margin-top: 0;
+                    padding: 3.62vw 8.45vw;
+                }
+
+                padding: 1.35vw;
+                font-size: 0.83vw;
+                font-weight: 300;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    .main_content {
+        @include MB {
+            flex-direction: column;
+            gap: 3.86vw;
+            margin-top: 3.86vw;
+        }
+
+        display: flex;
+        gap: 1.56vw;
+        // height: 12.08vw;
+        height: auto;
+        margin-top: 1.04vw;
+
+        .left {
+            @include MB {
+                width: 100%;
+            }
+
+            width: 37.6vw;
+
+            .item {
+                @include MB {
+                    width: 100%;
+                    border-radius: 2.41vw;
+                    margin-bottom: 3.86vw;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                @include box-shadow;
+                background: white;
+                border-radius: 0.52vw;
+                margin-bottom: 1.04vw;
+                .top {
+                    @include MB {
+                        height: 13.04vw;
+                        font-size: 4.83vw;
+                        gap: 6.52vw;
+                        padding: 3.62vw 8.45vw;
+                        border-bottom: 0.24vw dashed #000000;
+                    }
+                    height: 2.91vw;
+                    padding: 1.35vw;
+                    display: flex;
+                    align-items: center;
+                    gap: 1.4vw;
+                    border-bottom: 0.052vw dashed #000000;
+                    font-size: 1.04vw;
+                    font-weight: bold;
+
+                    .image {
+                        @include MB {
+                            width: 4.34vw;
+                        }
+                        width: 0.95vw;
+                    }
+
+                    .text {
+                        transform: translateY(0.2vw);
+                    }
+                }
+
+                .skill {
+                    @include MB {
+                        padding: 3.62vw 4.6vw;
+                    }
+
+                    padding: 1vw 0.4vw;
+                    padding-bottom: 0.3vw;
+
+                    .box {
+                        @include MB {
+                            padding: 2.05vw 6.64vw;
+                            margin-left: 3.86vw;
+                            margin-bottom: 3.86vw;
+                            font-size: 3.86vw;
+                            height: auto;
+                            border-radius: 1.2vw;
+                        }
+                        display: inline-block;
+                        height: 1.875vw;
+                        width: auto;
+                        font-size: 0.83vw;
+                        background: #efefef;
+                        border: 0.052vw solid #343846;
+                        box-sizing: border-box;
+                        border-radius: 0.26vw;
+                        padding: 0.41vw 1.406vw;
+                        margin-left: 0.83vw;
+                        margin-bottom: 0.83vw;
+                        white-space: nowrap;
+                        padding-top: 0.3vw;
+                    }
+                }
+
+                .education {
+                    @include MB {
+                        padding: 3.62vw 8.45vw;
+                        padding-bottom: 3vw;
+                        gap: 1.93vw;
+                    }
+                    padding: 1.35vw;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.625vw;
+
+                    .box {
+                        @include MB {
+                            border-radius: 1.2vw;
+                            padding: 3.38vw 6.03vw;
+                        }
+                        background: #efefef;
+                        border-radius: 0.26vw;
+                        padding: 1.25vw 2.4vw;
+
+                        .title {
+                            @include MB {
+                                font-size: 2.89vw;
+                                margin-bottom: 1.5vw;
+                            }
+                            font-size: 1.04vw;
+                            font-weight: 500;
+                            // margin-bottom: 0.2vw;
+                            // line-height: 1;
+                        }
+
+                        .text {
+                            @include MB {
+                                font-size: 2.89vw;
+                            }
+                            font-size: 0.83vw;
+                            font-weight: 300;
+                        }
+
+                        .label {
+                            span {
+                                @include MB {
+                                    font-size: 2.89vw;
+                                    margin-bottom: 0;
+                                    padding: 0.96vw 2.89vw;
+                                    border-radius: 1.2vw;
+                                    margin-bottom: 3vw;
+                                }
+                                font-size: 0.72vw;
+                                font-weight: 500;
+                                color: white;
+                                background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                                border-radius: 0.26vw;
+                                width: auto;
+                                display: inline-block;
+                                padding: 0.1vw 0.41vw;
+                                padding-top: 0.2vw;
+                                text-align: center;
+                                margin-bottom: 0.7vw;
+                            }
+                        }
+                    }
+                }
+
+                .award {
+                    @include MB {
+                        padding: 3.62vw 8.45vw;
+                        padding-bottom: 3vw;
+                        gap: 1.93vw;
+                    }
+                    padding: 1.35vw;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.83vw;
+
+                    .text {
+                        @include MB {
+                            border-radius: 1.2vw;
+                            padding: 3.38vw 6.03vw;
+                            font-size: 2.89vw;
+                        }
+
+                        background: #efefef;
+                        border-radius: 0.26vw;
+                        padding: 1.14vw 2.7vw;
+                        font-size: 0.83vw;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+        .right {
+            @include MB {
+                width: 100%;
+            }
+            width: 38vw;
+            .item {
+                @include MB {
+                    width: 100%;
+                    border-radius: 2.41vw;
+                    margin-bottom: 3.86vw;
+                }
+
+                @include box-shadow;
+                background: white;
+                border-radius: 0.52vw;
+                height: auto;
+
+                .top {
+                    @include MB {
+                        height: 13.04vw;
+                        font-size: 4.83vw;
+                        gap: 6.52vw;
+                        padding: 3.62vw 8.45vw;
+                        border-bottom: 0.24vw dashed #000000;
+                    }
+                    height: 2.91vw;
+                    padding: 1.35vw;
+                    display: flex;
+                    align-items: center;
+                    gap: 1.4vw;
+                    border-bottom: 0.052vw dashed #000000;
+                    font-size: 1.04vw;
+                    font-weight: bold;
+
+                    .image {
+                        @include MB {
+                            width: 4.347vw;
+                        }
+                        width: 0.95vw;
+                    }
+
+                    .text {
+                        transform: translateY(0.2vw);
+                    }
+                }
+
+                .exp {
+                    @include MB {
+                        padding: 3.62vw 8.45vw;
+                        padding-bottom: 3vw;
+                        gap: 1.93vw;
+                    }
+                    padding: 1.35vw;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.625vw;
+
+                    .box {
+                        @include MB {
+                            border-radius: 1.2vw;
+                            padding: 3.38vw 6.03vw;
+                        }
+                        background: #efefef;
+                        border-radius: 0.26vw;
+                        padding: 1.25vw 2.4vw;
+
+                        .title {
+                            @include MB {
+                                font-size: 2.89vw;
+                                margin-bottom: 2vw;
+                            }
+
+                            font-size: 1.04vw;
+                            font-weight: 500;
+                            margin-bottom: 0.46vw;
+                        }
+
+                        .text {
+                            @include MB {
+                                font-size: 2.89vw;
+                            }
+                            font-size: 0.83vw;
+                            font-weight: 300;
+
+                            .bold {
+                                font-weight: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,335 @@
+@import "general";
+
+.aim_coin_page {
+    .head_1 {
+        @include MB {
+            font-size: m(20);
+            line-height: m(23);
+            margin-top: 0;
+            color: #343846;
+        }
+
+        font-weight: 500;
+        font-size: p(48);
+        line-height: p(56);
+        color: #343846;
+        margin-top: p(25);
+    }
+
+    .coin_1 {
+        @include MB {
+            border-radius: m(10);
+            padding: m(5) m(18);
+            margin-top: m(13);
+        }
+
+        background: white;
+        @include box-shadow;
+        border-radius: p(10);
+        padding: p(35) p(36);
+        margin-top: p(36);
+
+        .top_2 {
+            @include MB {
+                padding-left: m(40);
+                font-size: m(20);
+                line-height: m(23);
+            }
+
+            padding-left: p(87);
+            font-weight: 500;
+            font-size: p(24);
+            line-height: p(28);
+            @include text-gradient;
+            position: relative;
+
+            &::before {
+                @include MB {
+                    width: m(18);
+                    height: m(18);
+                }
+
+                position: absolute;
+                content: "";
+                background: url("/images/account-aim-coin-1.svg");
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: p(25);
+                height: p(25);
+                left: 0;
+                top: 0;
+                transform: translateY(100%);
+            }
+
+            span {
+                @include MB {
+                    font-size: m(48);
+                    line-height: m(56);
+                }
+
+                font-weight: bold;
+                font-size: p(64);
+                line-height: p(75);
+            }
+        }
+
+        .mid_2 {
+            @include MB {
+                padding-left: m(40);
+                font-size: m(12);
+                line-height: m(14);
+                margin-top: m(10);
+            }
+
+            padding-left: p(87);
+            font-weight: 300;
+            font-size: p(16);
+            line-height: p(19);
+            position: relative;
+            margin-top: p(9);
+
+            &::before {
+                @include MB {
+                    width: m(18);
+                    height: m(18);
+                }
+
+                position: absolute;
+                content: "";
+                background: url("/images/account-aim-coin-2.svg");
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: p(25);
+                height: p(25);
+                left: 0;
+                top: 0;
+                transform: translateY(10%);
+            }
+        }
+
+        .bot_2 {
+            a {
+                @include MB {
+                    font-size: m(14);
+                    line-height: m(16);
+                    margin-top: m(15);
+                    margin-bottom: m(14);
+                    border: m(1) solid #f9003b;
+                    padding: p(0) p(0);
+                    width: 100%;
+                    height: m(36);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: m(5);
+                }
+
+                display: inline-block;
+                padding: p(12.5) p(52);
+                background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                border: p(1) solid #f9003b;
+                box-sizing: border-box;
+                border-radius: p(10);
+                color: white;
+                font-weight: bold;
+                font-size: p(20);
+                line-height: p(23);
+                margin-top: p(22);
+            }
+        }
+    }
+
+    .menu_1 {
+        @include MB {
+            font-size: m(20);
+            justify-content: space-between;
+            margin-top: m(15);
+            font-size: m(16);
+            font-weight: normal;
+        }
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        font-size: p(24);
+        font-weight: bold;
+        color: #343846;
+        position: relative;
+
+        &::before {
+            @include MB {
+                height: m(8);
+                border-radius: m(5);
+            }
+
+            position: absolute;
+            width: 100%;
+            content: "";
+            height: p(8);
+            border-radius: p(5);
+            background: rgba(249, 0, 59, 0.2);
+            left: 0;
+            bottom: 0;
+        }
+
+        .text_2 {
+            @include MB {
+                padding: m(10) m(20);
+            }
+
+            opacity: 0.5;
+            padding: p(19) p(58);
+            cursor: pointer;
+
+            &.active {
+                opacity: 1;
+                position: relative;
+
+                &::before {
+                    @include MB {
+                        height: m(8);
+                        border-radius: m(5);
+                    }
+
+                    position: absolute;
+                    width: 100%;
+                    content: "";
+                    height: p(8);
+                    border-radius: p(5);
+                    background: rgba(240, 11, 74, 1);
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    .items_1 {
+        @include MB {
+            grid-template-columns: 1fr;
+            column-gap: 0;
+            row-gap: m(8);
+            margin-top: m(19);
+        }
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: p(31);
+        row-gap: p(16);
+        margin-top: p(20);
+
+        .item_2 {
+            @include MB {
+                padding: m(5);
+                border-radius: m(10);
+            }
+
+            display: flex;
+            padding: p(8);
+            background: white;
+            border-radius: p(10);
+            @include box-shadow;
+
+            .image_3 {
+                @include MB {
+                    width: m(118);
+                    margin-right: m(14);
+                }
+
+                width: p(112);
+                margin-right: p(19);
+                img {
+                    @include MB {
+                        border-radius: m(5);
+                    }
+
+                    border-radius: p(10);
+                }
+            }
+
+            .text_3 {
+                @include MB {
+                    width: m(230);
+                    position: relative;
+                    padding-bottom: m(30);
+                }
+
+                width: p(340);
+                .title_4 {
+                    @include MB {
+                        font-size: m(16);
+                        margin-top: m(6);
+                    }
+
+                    font-weight: 500;
+                    font-size: p(24);
+                    line-height: 120%;
+                    @include text-gradient;
+                    margin-top: p(3);
+                }
+
+                .description_4 {
+                    @include MB {
+                        font-size: m(12);
+                        line-height: m(14);
+                        margin-top: m(21);
+                    }
+
+                    font-weight: 300;
+                    font-size: p(16);
+                    line-height: p(19);
+                    margin-top: p(11);
+                }
+
+                .time_4 {
+                    @include MB {
+                        font-size: m(12);
+                        line-height: m(14);
+                        gap: m(5);
+                        margin-top: m(8);
+                    }
+
+                    font-weight: 300;
+                    font-size: p(16);
+                    line-height: p(19);
+                    display: flex;
+                    gap: p(4);
+                    align-items: center;
+                    margin-top: p(7);
+
+                    .image_5 {
+                        @include MB {
+                            width: m(14);
+                        }
+                        width: p(16);
+                        transform: translateY(p(-2));
+                    }
+                }
+            }
+
+            position: relative;
+            .coin_3 {
+                @include MB {
+                    position: absolute;
+                    left: m(91);
+                    bottom: m(5);
+                    font-weight: 500;
+                    font-size: m(20);
+                    line-height: m(23);
+                    transform: translateX(100%);
+                }
+
+                font-weight: 500;
+                font-size: p(48);
+                line-height: p(56);
+                @include text-gradient;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,148 @@
+@import "./cart_lifetime.module.scss";
+
+.cart_page {
+    .box_1 {
+        @include MB {
+            height: auto;
+            @include box-shadow;
+            border-radius: m(10);
+            margin-top: m(26);
+            padding: m(16);
+            background: white;
+            margin-left: m(15);
+            margin-right: m(15);
+        }
+
+        height: p(504);
+        @include box-shadow;
+        border-radius: p(10);
+        background: url("/images/main/cart-thanks-1.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        margin-top: p(56);
+        padding: p(60) p(74);
+        margin-left: p(315);
+        margin-right: p(285);
+
+        .row1_2 {
+            @include MB {
+                font-size: m(20);
+                line-height: m(23);
+            }
+
+            font-weight: bold;
+            font-size: p(48);
+            line-height: p(56);
+            color: #f9003b;
+        }
+
+        .row2_2 {
+            @include MB {
+                font-size: m(12);
+                line-height: 130%;
+                width: 100%;
+                margin-top: m(12);
+            }
+
+            font-weight: 300;
+            font-size: p(20);
+            line-height: 120%;
+            width: p(553);
+            margin-top: p(26);
+        }
+
+        .row3_2 {
+            @include MB {
+                font-size: m(12);
+                line-height: 130%;
+                width: 100%;
+            }
+
+            font-weight: bold;
+            font-size: p(20);
+            line-height: 120%;
+            width: p(553);
+        }
+
+        .form_2 {
+            @include MB {
+                margin-top: m(11);
+                width: 100%;
+            }
+
+            margin-top: p(44);
+            width: p(376);
+
+            .input {
+                @include MB {
+                    margin-bottom: m(8);
+                }
+
+                position: relative;
+                margin-bottom: p(12);
+
+                input,
+                select {
+                    @include MB {
+                        font-size: m(14);
+                        line-height: m(16);
+                        padding-left: m(20);
+                        padding-right: m(20);
+                        height: m(48);
+                        border-radius: m(5);
+                    }
+
+                    width: 100%;
+                    height: p(48);
+                    border-radius: p(5);
+                    background: #efefef;
+                    border: none;
+                    font-weight: normal;
+                    font-size: p(16);
+                    line-height: p(19);
+                    padding-left: p(20);
+                    padding-right: p(20);
+                }
+
+                .placeholder {
+                    @include MB {
+                        font-size: m(14);
+                        line-height: m(16);
+                        left: m(20);
+                    }
+
+                    font-weight: normal;
+                    font-size: p(16);
+                    line-height: p(19);
+                    position: absolute;
+                    top: 50%;
+                    left: p(20);
+                    transform: translateY(-50%);
+                    pointer-events: none;
+
+                    &.hide {
+                        display: none;
+                    }
+
+                    span {
+                        @include text-gradient;
+                    }
+                }
+            }
+        }
+    }
+
+    .related_1 {
+        margin-top: p(68);
+
+        &:last-child {
+            @include MB {
+                margin-top: m(20);
+                padding-bottom: m(54);
+            }
+            margin-top: p(68);
+        }
+    }
+}

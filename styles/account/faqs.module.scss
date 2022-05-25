@@ -1,0 +1,141 @@
+@import "general";
+
+.faqs_page {
+    .head_1 {
+        @include MB {
+            font-size: m(20);
+            line-height: m(23);
+            margin-top: 0;
+            color: #343846;
+        }
+
+        font-weight: 500;
+        font-size: p(48);
+        line-height: p(56);
+        color: #343846;
+        margin-top: p(25);
+    }
+
+    .body_1 {
+        @include MB {
+            margin-top: m(23);
+        }
+        margin-top: p(38);
+
+        .item_2 {
+            @include MB {
+                padding: m(20) m(5);
+                border-radius: m(10);
+                margin-top: m(8);
+            }
+
+            padding: p(15) p(37);
+            background: white;
+            @include box-shadow;
+            border-radius: p(20);
+            margin-top: p(16);
+            position: relative;
+
+            .head_3 {
+                @include MB {
+                    font-size: m(16);
+                    padding-bottom: m(17);
+                    padding-left: m(15);
+                    padding-right: m(15);
+                    border-bottom: m(1) black solid;
+                }
+
+                font-weight: 500;
+                font-size: p(24);
+                line-height: 120%;
+                @include text-gradient-2;
+                padding-bottom: p(12);
+                border-bottom: p(1) black solid;
+            }
+
+            .body_3 {
+                @include MB {
+                    padding-left: m(15);
+                    padding-right: m(15);
+                    font-size: m(12);
+                    line-height: m(14);
+                    padding-top: m(10);
+                    height: m(50);
+                }
+
+                padding-top: p(24);
+                font-weight: 300;
+                font-size: p(20);
+                line-height: p(23);
+                height: p(90);
+                overflow: hidden;
+                margin-bottom: p(20);
+
+                &.active{
+                    height:auto;
+                    overflow: auto;
+                    margin-bottom: p(0);
+                }
+
+                .link_4 {
+                    @include MB {
+                        font-size: m(14);
+                        line-height: m(16);
+                        margin-top: m(8);
+                        bottom: m(5);
+                    }
+
+                    font-weight: 500;
+                    font-size: p(18);
+                    line-height: p(21);
+                    position: relative;
+                    @include text-gradient-2;
+                    margin-top: p(8);
+                    display: inline-block;
+                    cursor: pointer;
+                    position: absolute;
+                    bottom: p(10);
+                    z-index: 1;
+
+                    &::after {
+                        @include MB {
+                            width: m(10);
+                            height: m(10);
+                            top: m(3);
+                            right: m(-17);
+                        }
+
+                        content: "";
+                        position: absolute;
+                        background: url("/images/account-faqs-1.svg");
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        width: p(10);
+                        height: p(10);
+                        top: p(5);
+                        right: p(-15);
+                    }
+                }
+            }
+        }
+
+        .contact_2 {
+            @include MB {
+                font-size: m(10);
+                line-height: m(17);
+                margin-top: m(8);
+                margin-bottom: m(20);
+            }
+
+            font-size: p(12);
+            line-height: p(17);
+            color: #343846;
+            margin-top: p(16);
+
+            span {
+                @include text-gradient-2();
+            }
+        }
+    }
+}

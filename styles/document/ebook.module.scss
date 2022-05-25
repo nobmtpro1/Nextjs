@@ -1,0 +1,51 @@
+@import "./test.module.scss";
+
+.banner {
+    padding-left: 17.5vw;
+    padding-right: 17.5vw;
+
+    .left {
+        @include MB {
+            padding-top: 0;
+        }
+        padding-left: 0;
+        position: relative;
+        align-items: flex-start;
+        padding-top: 14vw;
+
+        .text {
+            @include MB {
+                left: 0;
+            }
+            position: relative;
+            left: -5vw;
+        }
+    }
+    .right {
+        position: relative;
+        .image {
+            position: absolute;
+            right: -6vw;
+            bottom: 0;
+            width: 62vw;
+            height: auto;
+            img {
+                width: 77%;
+            }
+        }
+    }
+}
+
+.more_document {
+    .boxes {
+        @include PC {
+            transform: translateX(0.7%);
+        }
+
+        .box {
+            @include PC {
+                width: 21.4vw;
+            }
+        }
+    }
+}

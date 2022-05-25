@@ -1,0 +1,378 @@
+@import "general";
+
+.offline_page {
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.13vw;
+
+        .title {
+            @include MB {
+                font-size: 4.83vw;
+            }
+
+            font-size: 2.5vw;
+            font-weight: 500;
+        }
+
+        .status {
+            @include MB {
+                display: none;
+            }
+            position: relative;
+
+            select {
+                width: 9.91vw;
+                height: 2.5vw;
+                font-size: 1.04vw;
+                font-weight: 500;
+                border: 0.052vw solid #f9003b;
+                box-sizing: border-box;
+                border-radius: 0.52vw;
+                padding: 0.425vw 0.83vw;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                text-indent: 1px;
+                text-overflow: "";
+                @include text-gradient;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 0.52vw;
+                height: 0.52vw;
+                right: 0.83vw;
+                top: 1vw;
+                background: url("/images/account-elearning-select.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                z-index: 1;
+            }
+        }
+    }
+
+    .menu {
+        @include MB {
+            // display: none;
+            font-size: 3.38vw;
+            gap: 2.3vw;
+            margin-top: 4vw;
+        }
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0vw;
+        font-size: 1.25vw;
+        font-weight: 500;
+        position: relative;
+        margin-top: 1.4vw;
+
+        &::before {
+            @include MB {
+                height: 1.7vw;
+                border-radius: 1.2vw;
+                bottom: -2vw;
+            }
+
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0.41vw;
+            background: rgba(249, 0, 59, 0.2);
+            border-radius: 0.26vw;
+            bottom: -0.625vw;
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            padding: 0 1.2vw;
+            padding-left: 3.43vw;
+            padding-right: 3.43vw;
+
+            &.active {
+                position: relative;
+                &::before {
+                    @include MB {
+                        height: 1.7vw;
+                        border-radius: 1.2vw;
+                        bottom: -2vw;
+                    }
+
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 0.41vw;
+                    background: rgba(243, 6, 69, 1);
+                    border-radius: 0.26vw;
+                    bottom: -0.625vw;
+                }
+            }
+        }
+    }
+
+    .category_mb {
+        @include PC {
+            display: none;
+        }
+
+        position: relative;
+        margin-top: 3vw;
+
+        select {
+            width: 100%;
+            font-size: 3.86vw;
+            font-weight: 500;
+            padding: 1.8vw 3.62vw;
+            background: transparent;
+            border-radius: 1.2vw;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: "";
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 2.4vw;
+            height: 2.4vw;
+            right: 3.62vw;
+            top: 3.8vw;
+            background: url("/images/account-header-dropdown-black.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: 1;
+        }
+    }
+
+    .courses {
+        @include MB {
+            gap: 2.89vw;
+            margin-top: 7.79vw;
+        }
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.98vw;
+        margin-top: 2.5vw;
+        position: relative;
+
+        .course {
+            @include MB {
+                gap: 1.3vw;
+                padding: 3.62vw 4.34vw;
+                border-radius: 2.4vw;
+            }
+            display: flex;
+            flex-direction: column;
+            gap: 0.625vw;
+            background: #343846;
+            color: white;
+            padding: 0.72vw 1.875vw;
+            border-radius: 0.52vw;
+            position: relative;
+            @include box-shadow;
+            z-index: 1;
+
+            &.active {
+                &::before {
+                    transform: rotate(0deg);
+                }
+            }
+
+            .name {
+                @include MB {
+                    font-size: 3.86vw;
+                }
+
+                font-size: 1.25vw;
+                font-weight: bold;
+            }
+
+            .info {
+                @include MB {
+                    font-size: 2.89vw;
+                    gap: 2.62vw;
+
+                    .text {
+                        transform: translateY(0.2vw);
+                    }
+                }
+
+                display: flex;
+                gap: 0.625vw;
+                font-size: 0.83vw;
+
+                .image {
+                    @include MB {
+                        width: 2.47vw;
+                    }
+
+                    width: 0.65vw;
+
+                    img {
+                        transform: translateY(-0.1vw);
+                    }
+                }
+            }
+
+            &::before {
+                @include MB {
+                    width: 2.89vw;
+                    height: 2.89vw;
+                    top: 4.2vw;
+                    right: 4vw;
+                }
+
+                content: "";
+                position: absolute;
+                background: url("/images/account-offline-3.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 1.09vw;
+                height: 1.09vw;
+                top: 1vw;
+                right: 2vw;
+                transform: rotate(180deg);
+            }
+        }
+
+        .course_content {
+            @include MB {
+                border-radius: 2.4vw;
+                padding-top: 4vw;
+                bottom: 3vw;
+            }
+
+            &.active {
+                display: block;
+            }
+            display: none;
+            position: relative;
+            background: white;
+            left: 0;
+            bottom: 1vw;
+            width: 100%;
+            border-radius: 0.52vw;
+            color: black;
+            z-index: 0;
+            padding-top: 1vw;
+            @include box-shadow;
+            // padding: 0.72vw 1.875vw;
+
+            .item {
+                @include MB {
+                    padding: 2.89vw 6.03vw;
+                    border-bottom: 0.24vw black solid;
+                    padding-bottom: 0vw;
+                }
+
+                &.active {
+                    & .title {
+                        opacity: 1;
+
+                        &::before {
+                            transform: rotate(0deg);
+                        }
+                    }
+
+                    & .detail {
+                        display: block;
+                    }
+                }
+                padding: 0.72vw 1.875vw;
+                padding-bottom: 0;
+                border-bottom: 0.052vw black solid;
+
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0.72vw;
+                }
+
+                .title {
+                    @include MB {
+                        font-size: 3.86vw;
+                        margin-bottom: 2.89vw;
+                    }
+
+                    font-size: 1.25vw;
+                    font-weight: 500;
+                    margin-bottom: 0.72vw;
+                    opacity: 0.4;
+                    position: relative;
+                    cursor: pointer;
+
+                    &::before {
+                        @include MB {
+                            width: 2.89vw;
+                            height: 2.89vw;
+                            top: 1.3vw;
+                            right: -2.9vw;
+                        }
+
+                        position: absolute;
+                        content: "";
+                        background: url("/images/account-offline-3.svg");
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 1.09vw;
+                        height: 1.09vw;
+                        top: 0.6vw;
+                        right: 0vw;
+                        filter: invert(100%);
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .detail {
+                    @include MB {
+                        font-size: 3.86vw;
+                    }
+
+                    display: none;
+                    font-size: 0.83vw;
+
+                    ul {
+                        @include MB {
+                            padding-left: 6.28vw;
+                        }
+
+                        padding-left: 1.45vw;
+
+                        li {
+                            position: relative;
+                            &::before {
+                                @include MB {
+                                    width: 1.93vw;
+                                    height: 1.93vw;
+                                    left: -6vw;
+                                    top: 1.7vw;
+                                }
+
+                                position: absolute;
+                                display: block;
+                                content: "";
+                                width: 0.41vw;
+                                height: 0.41vw;
+                                left: -1.3vw;
+                                border-radius: 150%;
+                                background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                                top: 0.4vw;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

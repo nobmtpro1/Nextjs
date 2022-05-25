@@ -1,0 +1,372 @@
+@import "../general";
+
+.discount_list {
+    @include MB{
+        padding-top: m(30);
+        padding-bottom: m(30);
+    }
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 100;
+    overflow-y: scroll;
+    padding-top: p(30);
+    padding-bottom: p(30);
+    display: none;
+
+    &.active{
+        display: flex;
+    }
+
+    & > .box {
+        @include MB{
+            width: m(383);
+            border-radius: m(20);
+            padding-top: m(20);
+            padding-bottom: m(30);
+        }
+
+        width: p(1061);
+        height: auto;
+        background: #f5f5f5;
+        border-radius: p(30);
+        @include box-shadow;
+        padding-top: p(37);
+        padding-bottom: p(82);
+
+        & > .head {
+            @include MB{
+                padding-left: m(30);
+                padding-right: m(30);
+                padding-bottom: m(15);
+                border-bottom: m(1) black solid;
+            }
+
+            padding-left: p(105);
+            padding-right: p(105);
+            padding-bottom: p(35);
+            border-bottom: p(1) black solid;
+            & > .title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                & > .left {
+                    @include MB{
+                        font-size: m(20);
+                        line-height: m(23);
+                    }
+                    
+                    font-weight: 500;
+                    font-size: p(34);
+                    line-height: p(40);
+                    @include text-gradient;
+                }
+
+                & > .right {
+                    @include MB{
+                        width: m(22);
+                        transform: translate(m(13), m(-10));
+                    }
+
+                    width: p(22);
+                    transform: translate(p(80), p(-25));
+                    cursor: pointer;
+                }
+            }
+
+            & > .description {
+                @include MB{
+                    font-size: m(12);
+                    line-height: m(14);
+                }
+                
+                font-weight: 300;
+                font-size: p(20);
+                line-height: 150%;
+                margin-top: p(7);
+            }
+
+            & > .list {
+                @include MB{
+                    font-size: m(12);
+                    line-height: m(14);
+                    margin-top: m(15);
+                }
+
+                font-size: p(20);
+                line-height: p(23);
+                margin-top: p(39);
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                & > .row {
+                    @include MB{
+                        padding-left: m(25);
+                        margin-bottom: m(14);
+                    }
+
+                    padding-left: p(73);
+                    margin-bottom: p(14);
+                    position: relative;
+
+                    &::before {
+                        @include MB{
+                            width: m(15);
+                            height: m(15);
+                        }
+
+                        position: absolute;
+                        content: "";
+                        background: url("/images/main/discount-list-2.svg");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: p(30);
+                        height: p(30);
+                        top: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+        & > .body {
+            @include MB{
+                padding-left: m(30);
+                padding-right: m(30);
+            }
+
+            padding-left: p(105);
+            padding-right: p(105);
+            padding-top: p(40);
+
+            & > .menu {
+                @include MB {
+                    margin-left: m(16);
+                    margin-right: m(16);
+                    justify-content: space-between;
+                    margin-top: m(10);
+                }
+
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                &::before {
+                    @include MB {
+                        border-radius: m(5);
+                        height: m(4);
+                    }
+
+                    position: absolute;
+                    content: "";
+                    height: p(8);
+                    width: 100%;
+                    left: 0;
+                    bottom: 0;
+                    background: rgba(249, 0, 59, 0.2);
+                    border-radius: p(5);
+                }
+
+                & > .text {
+                    @include MB {
+                        font-weight: 500;
+                        font-size: m(20);
+                        line-height: 120%;
+                        padding: m(12) m(12);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex: 1;
+                    }
+
+                    font-weight: 500;
+                    font-size: p(24);
+                    line-height: 120%;
+                    padding: p(19) p(104);
+                    cursor: pointer;
+                    position: relative;
+                    opacity: 0.3;
+
+                    &.active {
+                        opacity: 1;
+                        &::before {
+                            @include MB {
+                                border-radius: m(5);
+                                height: m(4);
+                            }
+
+                            position: absolute;
+                            content: "";
+                            height: p(8);
+                            width: 100%;
+                            left: 0;
+                            bottom: 0;
+                            background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                            border-radius: p(5);
+                        }
+                    }
+                }
+            }
+
+            & > .content {
+                @include MB{
+                    margin-top: m(20);
+                    font-size: m(12);
+                    line-height: m(14);
+                }
+
+                margin-top: p(23);
+                font-size: p(20);
+                line-height: p(23);
+
+                & .table {
+                    & > .head {
+                        @include MB{
+                            font-size: m(12);
+                            line-height: m(14);
+                            border-radius: m(5);
+                        }
+
+                        background: #343846;
+                        @include box-shadow;
+                        border-radius: p(10);
+                        color: white;
+                        font-weight: 500;
+                        font-size: p(20);
+                        line-height: p(23);
+                        text-align: center;
+                        position: relative;
+                        z-index: 1;
+
+                        & > .tr {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            & > .td {
+                                @include MB{
+                                    padding: m(13) m(20);
+                                }
+
+                                flex: 1;
+                                padding: p(13) p(78);
+                            }
+                        }
+                    }
+
+                    & > .body {
+                        @include MB{
+                            font-size: m(12);
+                            line-height: m(14);
+                            border-radius: m(5);
+                            margin-bottom: m(10);
+                            padding: m(8);
+                            padding-top: m(15);
+                            transform: translateY(m(-10));
+                        }
+
+                        background: white;
+                        @include box-shadow;
+                        border-radius: p(10);
+                        color: black;
+                        font-weight: 500;
+                        font-size: p(20);
+                        line-height: p(23);
+                        text-align: center;
+                        padding: p(16);
+                        padding-top: p(30);
+                        transform: translateY(p(-20));
+
+                        & > .tr {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            &:not(:last-child) {
+                                @include MB{
+                                    border-bottom: m(1) black solid;
+                                }
+
+                                border-bottom: p(1) black solid;
+                            }
+
+                            & > .td {
+                                @include MB{
+                                    padding: m(13) m(10);
+                                }
+
+                                flex: 1;
+                                padding: p(13) p(78);
+                            }
+                        }
+                    }
+                }
+
+                & > .content2 {
+                    & .table {
+                        & > .head {
+                            @include MB{
+                                font-size: m(8);
+                                line-height: m(10);
+                            }
+                            font-size: p(16);
+                            line-height: p(19);
+
+                            & > .tr {
+                                & > .td {
+                                    @include MB{
+                                        padding-top: m(10);
+                                        padding-bottom: m(10);
+                                    }
+
+                                    padding: p(0);
+                                    padding-top: p(13);
+                                    padding-bottom: p(13);
+                                }
+                            }
+                        }
+
+                        & > .body {
+                            @include MB{
+                                font-size: m(8);
+                                line-height: m(10);
+                            }
+
+                            font-size: p(16);
+                            line-height: p(19);
+
+                            & > .tr {
+                                & > .td {
+                                    @include MB{
+                                        padding: m(0);
+                                        padding-top: m(10);
+                                        padding-bottom: m(10);
+                                    }
+
+                                    padding: p(0);
+                                    padding-top: p(13);
+                                    padding-bottom: p(13);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & > .content1,
+                & > .content2 {
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,196 @@
+@import "./general";
+
+.main {
+    @include MB {
+        padding-left: 3.86vw;
+        padding-right: 3.86vw;
+    }
+    padding-left: 17vw;
+    padding-right: 17vw;
+    font-family: "Roboto", sans-serif;
+
+    .title {
+        @include MB {
+            font-size: 5.79vw;
+        }
+
+        font-size: 2.49vw;
+        font-weight: 500;
+        margin-top: 2.91vw;
+    }
+    .time {
+        @include MB {
+            gap: 1.2vw;
+            padding-bottom: 3vw;
+            padding-top: 1vw;
+        }
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.56vw;
+        padding-bottom: 0.57vw;
+
+        .image {
+            @include MB {
+                width: 3.86vw;
+            }
+            width: 1.14vw;
+            img {
+                width: 100%;
+                transform: translateY(-12%);
+            }
+        }
+
+        .minute {
+            @include MB {
+                font-size: 2.41vw;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1vw;
+            color: rgba(52, 56, 70, 0.6);
+            opacity: 0.6;
+        }
+    }
+
+    .detail {
+        @include MB {
+            display: block;
+        }
+        display: flex;
+
+        .left {
+            @include MB {
+                font-size: 2.89vw;
+                width: 100%;
+                border-top: 0 solid #343846;
+                border-bottom: 0 solid #343846;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: -3.68vw;
+                    height: 0.12vw;
+                    width: 100vw;
+                    background: black;
+                }
+            }
+            border-top: 0.039vw solid #343846;
+            // border-bottom: 0.039vw solid #343846;
+            width: 44vw;
+            padding-bottom: 0.7vw;
+            font-size: 1.04vw;
+            font-weight: 400;
+
+            .description {
+                @include MB {
+                    background: white;
+                    padding: 0;
+                    margin-top: 0.7vw;
+                }
+
+                background: #efefef;
+                padding: 1.4vw;
+                border-radius: 0.7vw;
+                margin-top: 1.5vw;
+            }
+
+            .content {
+                @include MB {
+                    padding: 0;
+                    margin-top: 4vw;
+                }
+                padding: 1.4vw;
+                border-radius: 0.7vw;
+                margin-top: -0.3vw;
+                padding-right: 0;
+            }
+
+            .share {
+                @include MB {
+                    gap: 4.01vw;
+                    padding: 5.5vw 0;
+                }
+                display: flex;
+                padding: 1.4vw;
+                gap: 1.3vw;
+                margin-top: -1.5vw;
+
+                .link {
+                    @include MB {
+                        width: 5.79vw;
+                    }
+
+                    width: 1.87vw;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .right {
+            @include MB {
+                padding-left: 0;
+            }
+            padding-left: 1.56vw;
+
+            .box {
+                @include MB {
+                    box-shadow: none;
+                    width: 100%;
+                }
+
+                @include box-shadow;
+                padding: 1.82vw 1.19vw;
+                border-radius: 0.52vw;
+                width: 23vw;
+
+                .title {
+                    @include MB {
+                        box-shadow: none;
+                        width: 100%;
+                        font-size: 5.79vw;
+                        margin-top: 4.34vw;
+                        margin-bottom: 5.2vw;
+                    }
+
+                    font-size: 1.76vw;
+                    font-weight: 500;
+                    margin-top: 0;
+                    margin-bottom: 1.3vw;
+                }
+
+                .item {
+                    @include MB {
+                        border-radius: 1.2vw;
+                        padding:2.89vw 3.86vw ;
+                        font-size: 3.38vw;
+                        margin-right: 3.86vw;
+                        margin-bottom: 3.86vw;
+                        font-weight: bold;
+                    }
+
+                    display: inline-block;
+                    border: 0.05vw solid #343846;
+                    box-sizing: border-box;
+                    border-radius: 0.52vw;
+                    padding: 0.4vw 2vw;
+                    font-size: 1.1vw;
+                    font-weight: 500;
+                    margin-right: 0.52vw;
+                    margin-bottom: 0.52vw;
+                    color: inherit;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,2298 @@
+@import "general";
+
+.learning_page {
+    & > .main_content {
+        @include MB {
+            padding-left: m(16);
+            padding-right: m(16);
+            padding-top: m(87);
+            display: flex;
+            flex-direction: column;
+        }
+
+        padding-top: p(156);
+        padding-left: p(320);
+        padding-right: p(315);
+        background: rgba(245, 245, 245, 1);
+
+        & > .breadcrumb_mb {
+            @include PC {
+                display: none;
+            }
+            display: flex;
+            gap: m(37);
+            padding-left: m(15);
+            font-size: m(12);
+            line-height: m(14);
+            margin-bottom: m(9);
+
+            & > .link:last-child {
+                @include text-gradient;
+            }
+
+            & > .link:not(:first-child) {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background: url("/images/main/learning-20.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: m(8);
+                    height: m(8);
+                    top: m(3);
+                    left: m(-20);
+                }
+            }
+        }
+
+        & > .name {
+            @include MB {
+                font-size: m(20);
+                line-height: m(23);
+                order: 2;
+                margin-top: m(8);
+            }
+
+            font-weight: 500;
+            font-size: p(48);
+            line-height: p(56);
+        }
+
+        & > .category {
+            @include MB {
+                margin-top: m(14);
+                order: 3;
+            }
+
+            margin-top: p(12);
+
+            & > .text {
+                @include MB {
+                    font-size: m(14);
+                    line-height: m(16);
+                    border-radius: m(5);
+                    padding: m(6) m(16);
+                    padding-left: m(28);
+                    margin-right: m(8);
+                    margin-bottom: m(8);
+                }
+
+                font-weight: 500;
+                font-size: p(16);
+                line-height: p(19);
+                color: white;
+                display: inline-block;
+                background: linear-gradient(90deg, rgba(227, 32, 104, 0.5) 2.44%, rgba(245, 0, 59, 0.5) 100%);
+                border-radius: p(5);
+                padding: p(5) p(9);
+                padding-left: p(28);
+                margin-right: p(17);
+                margin-bottom: p(29);
+                position: relative;
+
+                &::before {
+                    @include MB {
+                        width: m(8);
+                        height: m(8);
+                        top: m(10);
+                        left: m(10);
+                    }
+
+                    position: absolute;
+                    content: "";
+                    width: p(8);
+                    height: p(9);
+                    top: p(10);
+                    left: p(10);
+                    border-radius: 150%;
+                    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                }
+            }
+        }
+
+        & > .video {
+            @include MB {
+                order: 1;
+            }
+
+            display: flex;
+            gap: p(31);
+            padding-bottom: p(20);
+
+            & > .left {
+                @include MB {
+                    width: 100%;
+                }
+
+                // width: p(959);
+                width: 100%;
+
+                & > .top {
+                    @include MB {
+                        // border-radius: m(5);
+                        // border: m(5) #343846 solid;
+                    }
+
+                    // border-radius: p(10);
+                    // box-sizing: border-box;
+                    // border: p(1) #343846 solid;
+
+                    video,
+                    iframe {
+                        @include MB {
+                            border-radius: m(12);
+                        }
+                        width: 100%;
+                        height: 80vh;
+                        border-radius: p(10);
+                        border: none;
+                        outline: none;
+                    }
+                }
+
+                & > .bot {
+                    @include MB {
+                        height: m(26);
+                        margin-top: m(8);
+                        border-radius: m(5);
+                    }
+                    display: none;
+                    height: p(62);
+                    margin-top: p(23);
+                    background: #343846;
+                    border-radius: p(10);
+                }
+            }
+
+            // & > .right {
+            //     @include MB {
+            //         display: none;
+            //     }
+            //     flex: 1;
+            //     background: #343846;
+            //     border-radius: p(10);
+
+            //     & > .items {
+            //         overflow: auto;
+            //         height: p(550) !important;
+            //         & > .item {
+            //             padding: p(25);
+            //             color: white;
+            //             font-weight: 500;
+            //             font-size: p(15);
+            //             cursor: pointer;
+            //             border-bottom: p(1) white solid;
+
+            //             &.active {
+            //                 background: rgb(17, 13, 13);
+            //             }
+            //         }
+            //     }
+            // }
+        }
+    }
+
+    & > .info {
+        @include MB {
+            padding-left: m(0);
+            padding-right: m(0);
+            background: rgba(245, 245, 245, 1);
+            padding-top: m(15);
+        }
+
+        padding-left: p(320);
+        padding-right: p(315);
+        & > .box {
+            @include MB {
+                margin-left: m(16);
+                margin-right: m(16);
+                border-radius: m(10);
+                font-size: m(10);
+                line-height: 120%;
+                padding-right: p(0);
+                background: white;
+            }
+
+            @include box-shadow;
+            border-radius: p(10);
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: p(24);
+            line-height: 120%;
+            align-items: center;
+            padding-right: p(40);
+
+            & > .left {
+                @include MB {
+                    justify-content: center;
+                    width: 100%;
+                }
+                display: flex;
+                align-items: center;
+
+                & > .text {
+                    @include MB {
+                        padding: m(20) m(15);
+                    }
+
+                    padding: p(35);
+                    cursor: pointer;
+
+                    &.active {
+                        @include text-gradient;
+                        position: relative;
+
+                        &::before {
+                            @include MB {
+                                border-radius: m(10);
+                                bottom: m(10);
+                                left: m(16);
+                                width: 60%;
+                                height: m(3);
+                            }
+
+                            position: absolute;
+                            content: "";
+                            width: 60%;
+                            height: p(4);
+                            background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                            border-radius: p(10);
+                            bottom: p(14);
+                            left: p(35);
+                        }
+                    }
+                }
+            }
+
+            & > .right {
+                @include MB {
+                    display: none;
+                }
+
+                display: flex;
+                align-items: center;
+                gap: p(44);
+
+                & > .button {
+                    cursor: pointer;
+                    display: flex;
+                    gap: p(8);
+                    align-items: center;
+
+                    & > .image {
+                        width: p(25);
+                    }
+                }
+            }
+        }
+
+        & > .body {
+            @include MB {
+                flex-direction: column;
+                margin-top: m(12);
+                gap: p(0);
+            }
+
+            display: flex;
+            gap: p(39);
+            margin-top: p(64);
+            & > .left {
+                @include MB {
+                    width: 100%;
+                    order: 2;
+                    background: white;
+                    padding-left: m(16);
+                    padding-right: m(16);
+                }
+
+                width: p(843);
+                overflow: hidden;
+
+                & > .content1,
+                & > .content2,
+                & > .content3,
+                & > .content4,
+                & > .content5 {
+                    @include MB {
+                        border-bottom: unset;
+                        padding-bottom: p(0);
+                    }
+                    display: none;
+                    border-bottom: p(1) black solid;
+                    padding-bottom: p(20);
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
+                & > .content1 {
+                    @include MB {
+                        padding-top: m(40);
+                    }
+
+                    & > .longtext {
+                        & > .title {
+                            @include MB {
+                                font-size: m(20);
+                                line-height: 105%;
+                                margin-bottom: m(9);
+                                margin-top: m(9);
+                            }
+
+                            font-weight: 500;
+                            font-size: p(34);
+                            line-height: 105%;
+                            margin-bottom: p(19);
+                            margin-top: p(2);
+                        }
+
+                        li {
+                            list-style: initial;
+                        }
+
+                        & > .content {
+                            @include MB {
+                                font-size: m(12);
+                                line-height: 150%;
+                            }
+                            font-weight: 300;
+                            font-size: p(20);
+                            line-height: 150%;
+                        }
+
+                        p {
+                            @include MB {
+                                margin-bottom: m(7);
+                            }
+
+                            margin-bottom: p(16);
+                        }
+                    }
+                }
+
+                & > .content2 {
+                    @include MB {
+                        padding-top: m(39);
+                    }
+                    & > .title {
+                        @include MB {
+                            font-size: m(20);
+                            line-height: m(18);
+                        }
+                        font-weight: 500;
+                        font-size: p(34);
+                        line-height: 105%;
+                    }
+
+                    & > .comments {
+                        @include MB {
+                            margin-top: m(15);
+                        }
+
+                        margin-top: p(46);
+                        & > .comment {
+                            @include MB {
+                                gap: m(12);
+                                margin-bottom: m(18);
+                            }
+
+                            display: flex;
+                            gap: p(29);
+                            margin-bottom: p(38);
+
+                            & > .left {
+                                @include MB {
+                                    width: m(30);
+                                    height: m(30);
+                                }
+                                width: p(77);
+                                height: p(77);
+                                img {
+                                    border-radius: 150%;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+
+                            & > .right {
+                                flex: 1;
+                                overflow: hidden;
+
+                                & > .name {
+                                    @include MB {
+                                        font-size: m(12);
+                                        line-height: m(14);
+                                        padding-bottom: m(14);
+                                        position: relative;
+                                        z-index: 2;
+                                    }
+
+                                    font-weight: 500;
+                                    font-size: p(24);
+                                    line-height: p(28);
+                                    background: white;
+                                    padding-bottom: p(21);
+                                }
+
+                                & > .input {
+                                    textarea {
+                                        @include MB {
+                                            height: m(53);
+                                            border-radius: m(5);
+                                            font-size: m(12);
+                                            line-height: 150%;
+                                            margin-top: m(5);
+                                            resize: none;
+                                            padding: m(11);
+                                        }
+
+                                        border: none;
+                                        width: 100%;
+                                        height: p(112);
+                                        border-radius: p(10);
+                                        background: #efefef;
+                                        font-size: p(20);
+                                        line-height: 120%;
+
+                                        resize: none;
+                                        padding: p(20);
+                                    }
+                                }
+
+                                & > .button {
+                                    @include MB {
+                                        border-radius: m(5);
+                                        font-size: m(16);
+                                        line-height: m(19);
+                                        padding: m(8.5);
+                                        margin-top: m(8);
+                                        display: block;
+                                        text-align: center;
+                                    }
+
+                                    display: inline-block;
+                                    border-radius: p(10);
+                                    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                                    font-weight: 500;
+                                    font-size: p(20);
+                                    line-height: p(23);
+                                    color: white;
+                                    padding: p(12.5) p(55);
+                                    cursor: pointer;
+                                    margin-top: p(8);
+                                }
+
+                                & > .input_disable {
+                                    @include MB {
+                                        border-radius: m(5);
+                                        position: relative;
+                                        z-index: 2;
+                                    }
+                                    border-radius: p(10);
+                                    background: #efefef;
+                                    & > .text {
+                                        @include MB {
+                                            height: m(65);
+                                            padding: m(11);
+                                            font-size: m(12);
+                                            line-height: 150%;
+                                            padding-bottom: 0;
+                                            width: m(335);
+                                        }
+
+                                        width: p(700);
+                                        height: p(112);
+                                        padding: p(20);
+                                        font-weight: 300;
+                                        font-size: p(20);
+                                        line-height: 150%;
+                                        overflow: hidden;
+
+                                        &.active {
+                                            height: auto;
+                                        }
+                                    }
+
+                                    & > .more {
+                                        @include MB {
+                                            font-size: m(12);
+                                            line-height: 150%;
+                                            margin-left: m(11);
+                                        }
+
+                                        @include text-gradient;
+                                        font-weight: 500;
+                                        font-size: p(18);
+                                        line-height: p(21);
+                                        margin-left: p(22);
+                                        position: relative;
+                                        display: inline-block;
+                                        cursor: pointer;
+
+                                        &::before {
+                                            @include MB {
+                                                width: m(7);
+                                                height: m(9);
+                                                top: m(5);
+                                                right: m(-10);
+                                            }
+
+                                            position: absolute;
+                                            content: "";
+                                            background: url("/images/main/learning-11.svg");
+                                            background-position: center;
+                                            background-repeat: no-repeat;
+                                            background-size: contain;
+                                            width: p(10);
+                                            height: p(11);
+                                            top: p(5);
+                                            right: p(-15);
+                                        }
+                                    }
+
+                                    & > .action {
+                                        @include MB {
+                                            gap: m(18);
+                                            padding-left: m(11);
+                                            padding-right: m(11);
+                                            padding-bottom: m(11);
+                                        }
+
+                                        display: flex;
+                                        align-items: center;
+                                        gap: p(20);
+                                        padding-left: p(22);
+                                        padding-right: p(22);
+                                        padding-bottom: p(18);
+
+                                        & > .button {
+                                            @include MB {
+                                                gap: m(6);
+                                            }
+
+                                            display: flex;
+                                            gap: p(4);
+                                            align-items: center;
+
+                                            & > .image {
+                                                @include MB {
+                                                    width: m(15);
+                                                }
+
+                                                width: p(20);
+                                                cursor: pointer;
+                                            }
+
+                                            & > .text {
+                                                @include MB {
+                                                    font-size: m(12);
+                                                    line-height: 150%;
+                                                    transform: translateY(m(2));
+                                                }
+
+                                                font-weight: 500;
+                                                font-size: p(18);
+                                                line-height: 150%;
+                                                transform: translateY(p(3));
+                                            }
+
+                                            &:last-child {
+                                                flex: 1;
+                                                display: flex;
+                                                justify-content: flex-end;
+                                                color: rgba(52, 56, 70, 0.6);
+                                            }
+                                        }
+                                    }
+                                }
+
+                                & > .replys {
+                                    @include MB {
+                                        margin-left: m(30);
+                                    }
+
+                                    margin-left: p(30);
+                                    & > .reply {
+                                        @include MB {
+                                            border-radius: m(5);
+                                            margin-top: m(19);
+                                            padding: m(11);
+                                        }
+
+                                        border-radius: p(10);
+                                        margin-top: p(16);
+                                        background: #efefef;
+                                        padding: p(11) p(20);
+                                        position: relative;
+
+                                        &:first-child {
+                                            &::before {
+                                                @include MB {
+                                                    height: m(50);
+                                                    transform: translateY(m(71));
+                                                }
+                                            }
+                                        }
+
+                                        &::before {
+                                            @include MB {
+                                                position: absolute;
+                                                width: m(15);
+                                                height: m(9000);
+                                                border: m(0.5) solid rgba(52, 56, 70, 1);
+                                                left: m(-15);
+                                                top: m(-90);
+                                                z-index: 0;
+                                                border-right: none;
+                                                border-top: none;
+                                                border-top-left-radius: 0;
+                                            }
+
+                                            position: absolute;
+                                            content: "";
+                                            width: p(30);
+                                            height: p(9000);
+                                            border: p(0.5) solid #343846;
+                                            left: p(-15);
+                                            top: p(-100);
+                                            z-index: -1;
+                                            border-right: none;
+                                            border-top: none;
+                                            border-top-left-radius: 0;
+                                            transform: translateY(-98.5%);
+                                        }
+
+                                        & > .head {
+                                            @include MB {
+                                                gap: m(5);
+                                                align-items: center;
+                                            }
+
+                                            display: flex;
+                                            gap: p(14);
+
+                                            & > .left {
+                                                @include MB {
+                                                    width: m(30);
+                                                    height: m(30);
+                                                }
+
+                                                width: p(45);
+                                                height: p(45);
+
+                                                img {
+                                                    border-radius: 150%;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                }
+                                            }
+
+                                            & > .right {
+                                                @include MB {
+                                                    font-size: m(12);
+                                                    line-height: m(14);
+                                                }
+
+                                                flex: 1;
+                                                font-weight: 500;
+                                                font-size: p(24);
+                                                line-height: p(28);
+                                            }
+                                        }
+
+                                        & > .text {
+                                            @include MB {
+                                                font-size: m(12);
+                                                line-height: 150%;
+                                                width: m(280);
+                                            }
+
+                                            font-weight: 300;
+                                            font-size: p(20);
+                                            line-height: 150%;
+                                            margin-top: p(10);
+                                            width: p(660);
+                                            overflow: hidden;
+                                        }
+
+                                        & > .action {
+                                            @include MB {
+                                                gap: m(18);
+                                            }
+
+                                            display: flex;
+                                            align-items: center;
+                                            gap: p(20);
+
+                                            & > .button {
+                                                @include MB {
+                                                    gap: m(6);
+                                                }
+
+                                                display: flex;
+                                                gap: p(4);
+                                                align-items: center;
+
+                                                & > .image {
+                                                    @include MB {
+                                                        width: m(15);
+                                                    }
+                                                    width: p(20);
+                                                    cursor: pointer;
+                                                }
+
+                                                & > .text {
+                                                    @include MB {
+                                                        font-size: m(12);
+                                                        line-height: 150%;
+                                                        transform: translateY(m(2));
+                                                    }
+
+                                                    font-weight: 500;
+                                                    font-size: p(18);
+                                                    line-height: 150%;
+                                                    transform: translateY(p(3));
+                                                }
+
+                                                &:last-child {
+                                                    flex: 1;
+                                                    display: flex;
+                                                    justify-content: flex-end;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    & > .add_reply {
+                                        & > .text {
+                                            textarea {
+                                                @include MB {
+                                                    height: m(53) !important;
+                                                    border-radius: m(5);
+                                                    font-weight: 300;
+                                                    font-size: m(12);
+                                                    line-height: 150%;
+                                                    padding: m(11);
+                                                }
+                                                width: 100% !important;
+                                                height: p(112);
+                                                border-radius: p(10);
+                                                background: #efefef;
+                                                font-size: p(20);
+                                                line-height: 120%;
+                                                resize: none;
+                                                margin-top: p(20);
+                                                padding: p(20);
+                                                border: none;
+                                            }
+                                        }
+
+                                        & > .button {
+                                            button {
+                                                @include MB {
+                                                    border-radius: m(5);
+                                                    font-weight: 500;
+                                                    font-size: m(14);
+                                                    line-height: m(19);
+                                                    color: white;
+                                                    padding: p(25.5);
+                                                    width: 100%;
+                                                }
+                                                background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                                                border-radius: p(10);
+                                                font-weight: 500;
+                                                font-size: p(20);
+                                                line-height: p(23);
+                                                color: white;
+                                                padding: p(12.5) p(55.5);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        & > .button {
+                            @include MB {
+                                font-size: m(16);
+                                line-height: m(19);
+                                border-radius: m(5);
+                                padding: m(8.5);
+                                margin-bottom: m(0);
+                            }
+
+                            display: block;
+                            font-weight: 500;
+                            font-size: p(20);
+                            line-height: p(23);
+                            border-radius: p(10);
+                            background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                            color: white;
+                            padding: p(12.5);
+                            text-align: center;
+                            cursor: pointer;
+                            margin-bottom: p(100);
+                        }
+                    }
+                }
+
+                & > .content3 {
+                    @include MB {
+                        padding-top: m(39);
+                    }
+                    & > .podcast {
+                        & > .title {
+                            @include MB {
+                                font-size: m(20);
+                                line-height: m(18);
+                            }
+                            font-weight: 500;
+                            font-size: p(34);
+                            line-height: 105%;
+                        }
+
+                        & > .links {
+                            @include MB {
+                                font-size: m(12);
+                                line-height: m(24);
+                                margin-top: m(14);
+                            }
+                            margin-top: p(26);
+                            font-size: p(20);
+                            line-height: p(24);
+
+                            & > .link {
+                                @include MB {
+                                    gap: m(15);
+                                    margin-bottom: m(10);
+                                }
+
+                                display: flex;
+                                gap: p(30);
+                                align-items: center;
+                                cursor: pointer;
+                                margin-bottom: p(20);
+
+                                & > .left {
+                                    @include MB {
+                                        width: m(20);
+                                    }
+                                    width: p(32);
+                                }
+
+                                & > .mid {
+                                    width: auto;
+                                }
+
+                                & > .right {
+                                    @include MB {
+                                        width: m(15);
+                                    }
+
+                                    width: p(24);
+                                }
+                            }
+                        }
+                    }
+
+                    & > .glossary {
+                        & > .title {
+                            @include MB {
+                                font-size: m(20);
+                                line-height: m(18);
+                                margin-top: m(7);
+                            }
+
+                            font-weight: 500;
+                            font-size: p(34);
+                            line-height: 105%;
+                            margin-top: p(22);
+                        }
+
+                        & > .boxes {
+                            @include MB {
+                                margin-top: m(25);
+                            }
+
+                            margin-top: p(30);
+
+                            & > .box {
+                                @include MB {
+                                    font-weight: bold;
+                                    font-size: m(12);
+                                    line-height: m(14);
+                                    padding: m(11) m(20);
+                                    border-radius: m(5);
+                                    border: m(1) black solid;
+                                    margin-right: m(7);
+                                    margin-bottom: m(8);
+                                }
+
+                                display: inline-block;
+                                font-weight: bold;
+                                font-size: p(20);
+                                line-height: p(23);
+                                padding: p(12.5) p(53);
+                                border-radius: p(10);
+                                border: p(1) black solid;
+                                margin-right: p(30);
+                                margin-bottom: p(8);
+                            }
+                        }
+                    }
+
+                    & > .banner_1 {
+                        @include MB {
+                            border-radius: m(10);
+                            padding: m(10) m(20);
+                            margin-top: m(10);
+                            margin-bottom: p(0);
+                        }
+
+                        width: 100%;
+                        color: white;
+                        border-radius: p(20);
+                        padding: p(30) p(80);
+                        background: linear-gradient(
+                                113.64deg,
+                                rgba(249, 0, 59, 0.77) 15.22%,
+                                rgba(245, 0, 59, 0) 84.78%
+                            ),
+                            url("/images/main/learning-16.png");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        margin-top: p(15);
+                        margin-bottom: p(15);
+
+                        & > .title {
+                            @include MB {
+                                font-size: m(24);
+                                line-height: m(28);
+                            }
+
+                            font-weight: bold;
+                            font-size: p(34);
+                            line-height: p(40);
+                        }
+
+                        & > .description {
+                            @include MB {
+                                font-size: m(12);
+                                line-height: 120%;
+                                margin-top: m(8);
+                                width: m(251);
+                            }
+                            font-weight: 500;
+                            font-size: p(20);
+                            line-height: 150%;
+                            margin-top: p(5);
+                            width: p(513);
+                        }
+
+                        & > .button {
+                            & > .link {
+                                @include MB {
+                                    margin-top: m(22);
+                                    font-size: m(14);
+                                    line-height: m(16);
+                                    padding: m(10) m(32);
+                                    border-radius: m(10);
+                                }
+
+                                margin-top: p(16);
+                                display: inline-block;
+                                font-weight: bold;
+                                font-size: p(20);
+                                line-height: p(23);
+                                color: #f9003b;
+                                background: white;
+                                padding: p(12.5) p(50);
+                                cursor: pointer;
+                                border-radius: p(10);
+                            }
+                        }
+                    }
+                }
+
+                & > .content4 {
+                    @include MB {
+                        padding-top: m(40);
+                    }
+
+                    & > .cerfiticate {
+                        & > .title {
+                            @include MB {
+                                font-size: m(20);
+                                line-height: m(18);
+                            }
+
+                            font-weight: 500;
+                            font-size: p(34);
+                            line-height: 105%;
+                        }
+
+                        & > .content {
+                            @include MB {
+                                flex-direction: column;
+                                gap: m(11);
+                                padding-left: p(0);
+                                margin-top: m(9);
+                            }
+
+                            display: flex;
+                            gap: p(52);
+                            margin-top: p(31);
+
+                            & > .image {
+                                @include MB {
+                                    width: m(240);
+                                }
+
+                                width: p(281);
+                            }
+
+                            & > .text {
+                                @include MB {
+                                    font-weight: 300;
+                                    font-size: m(12);
+                                    line-height: m(14);
+                                }
+
+                                flex: 1;
+                                font-weight: normal;
+                                font-size: p(20);
+                                line-height: 130%;
+
+                                ul {
+                                    @include MB {
+                                        gap: m(7);
+                                        margin-bottom: 0;
+                                    }
+
+                                    padding-left: p(0);
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: p(9);
+
+                                    li {
+                                        @include MB {
+                                            padding-left: m(30);
+                                        }
+
+                                        position: relative;
+                                        padding-left: p(45);
+
+                                        &::before {
+                                            @include MB {
+                                                width: m(14);
+                                                height: m(15);
+                                                top: m(2);
+                                                left: 0;
+                                            }
+
+                                            position: absolute;
+                                            content: "";
+                                            background: url("/images/main/product-li.svg");
+                                            background-size: contain;
+                                            background-position: center;
+                                            background-repeat: no-repeat;
+                                            width: p(24);
+                                            height: p(24);
+                                            top: p(5);
+                                            left: 0;
+                                        }
+                                    }
+                                }
+
+                                & > .button {
+                                    @include MB {
+                                        padding-left: m(0);
+                                    }
+
+                                    padding-left: p(45);
+                                    & > .link {
+                                        @include MB {
+                                            width: 100%;
+                                            height: m(38);
+                                            border-radius: m(5);
+                                            gap: m(10);
+                                            font-size: m(16);
+                                            line-height: m(19);
+                                            margin-top: m(20);
+                                        }
+                                        display: flex;
+                                        width: p(228);
+                                        height: p(48);
+                                        border-radius: p(10);
+                                        background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: p(8);
+                                        font-weight: bold;
+                                        font-size: p(20);
+                                        line-height: p(23);
+                                        color: white;
+
+                                        & > .image {
+                                            @include MB {
+                                                width: m(18);
+                                            }
+                                            width: p(18);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        & > .related {
+                            @include MB {
+                                padding: p(0) p(0);
+                                background: white;
+                                margin-top: m(30);
+                            }
+
+                            padding: p(25) p(67);
+                            padding-bottom: p(39);
+                            background: #efefef;
+                            border-radius: p(20);
+                            margin-top: p(112);
+
+                            & > .title {
+                                @include MB {
+                                    font-size: m(20);
+                                    line-height: m(18);
+                                }
+
+                                font-weight: 500;
+                                font-size: p(34);
+                                line-height: 105%;
+                            }
+
+                            & > .description {
+                                @include MB {
+                                    font-weight: 300;
+                                    font-size: m(12);
+                                    line-height: m(14);
+                                    margin-top: m(14);
+                                }
+
+                                font-size: p(20);
+                                line-height: p(23);
+                                margin-top: p(18);
+                            }
+
+                            & > .items {
+                                @include MB {
+                                    display: grid;
+                                    grid-template-columns: 1fr 1fr;
+                                    column-gap: m(9);
+                                    row-gap: m(18);
+                                    margin-top: m(19);
+                                }
+
+                                display: grid;
+                                grid-template-columns: 1fr 1fr 1fr;
+                                column-gap: p(50);
+                                row-gap: p(28);
+                                margin-top: p(41);
+
+                                & > .item {
+                                    @include MB {
+                                        width: m(187);
+                                        padding: m(8);
+                                        border-radius: m(10);
+                                    }
+
+                                    width: p(205);
+                                    padding: p(8);
+                                    border-radius: p(10);
+                                    @include box-shadow;
+                                    background: white;
+
+                                    & > .image {
+                                        img {
+                                            @include MB {
+                                                border-radius: m(10);
+                                            }
+
+                                            border-radius: p(10);
+                                        }
+                                    }
+
+                                    & > .name {
+                                        @include MB {
+                                            font-size: m(18);
+                                            line-height: 100%;
+                                        }
+
+                                        font-weight: 500;
+                                        font-size: p(20);
+                                        line-height: 100%;
+                                        margin-top: p(8);
+                                    }
+
+                                    & > .button {
+                                        a {
+                                            @include MB {
+                                                font-size: m(16);
+                                                line-height: m(19);
+                                                margin-top: m(32);
+                                                height: m(38);
+                                                border-radius: m(5);
+                                            }
+
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            height: p(36);
+                                            border-radius: p(5);
+                                            background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                                            color: white;
+                                            font-weight: 500;
+                                            font-size: p(16);
+                                            line-height: p(19);
+                                            margin-top: p(27);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                & > .content5 {
+                    @include MB {
+                        padding: unset;
+                        padding-top: m(40);
+                    }
+                    padding: p(10);
+                    & > .review {
+                        @include MB {
+                            background: white;
+                            padding-left: m(0);
+                            padding-right: m(0);
+                            margin-top: p(0);
+                            padding-top: m(0);
+                        }
+
+                        & > .title {
+                            @include MB {
+                                font-weight: 500;
+                                font-size: m(20);
+                                line-height: m(18);
+                            }
+
+                            font-weight: 500;
+                            font-size: p(34);
+                            line-height: 105%;
+                        }
+
+                        & > .result {
+                            @include MB {
+                                height: m(118);
+                                border-radius: m(10);
+                                margin-top: m(24);
+                            }
+                            display: flex;
+                            height: p(216);
+                            border-radius: p(20);
+                            background: #efefef;
+                            margin-top: p(21);
+
+                            & > .left {
+                                @include MB {
+                                    width: m(102);
+                                    border-right: m(1) black solid;
+                                }
+
+                                width: p(202);
+                                display: flex;
+                                align-items: center;
+                                flex-direction: column;
+                                justify-content: center;
+                                gap: p(18);
+                                border-right: p(1) black solid;
+
+                                & > .circle {
+                                    .percent {
+                                        @include MB {
+                                            width: m(82);
+                                            height: m(82);
+                                        }
+
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: 100%;
+                                        height: p(140);
+
+                                        // width: p(140);
+                                        .ratio {
+                                            @include MB {
+                                                width: m(79);
+                                                height: m(79);
+                                                font-size: m(24);
+                                            }
+
+                                            // --ratio: 0.25;
+                                            height: p(119);
+                                            width: p(119.5);
+                                            border-radius: 50%;
+                                            position: relative;
+                                            clip-path: circle(50%);
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            font-weight: bold;
+                                            font-size: p(36);
+                                            font-weight: bold;
+                                            text-align: center;
+
+                                            .border {
+                                                position: absolute;
+                                                width: 100%;
+                                                height: 100%;
+                                                top: 0;
+                                                left: 0;
+                                                // background-image: conic-gradient(
+                                                //     rgba(249, 0, 59, 0.2) 0 calc(var(--ratio) * 360deg),
+                                                //     rgba(245, 0, 59, 1) calc(var(--ratio) * 360deg) 360deg
+                                                // );
+                                                z-index: -2;
+                                            }
+                                        }
+
+                                        .ratio::after {
+                                            content: "";
+                                            position: absolute;
+                                            width: 80%;
+                                            height: 80%;
+                                            top: 10%;
+                                            left: 10%;
+                                            background: #efefef;
+                                            border-radius: 50%;
+                                            z-index: -1;
+                                        }
+                                    }
+                                }
+
+                                & > .star {
+                                    @include MB {
+                                        display: none;
+                                    }
+                                    display: flex;
+                                    gap: p(3);
+
+                                    img {
+                                        width: p(16.6);
+                                    }
+                                }
+                            }
+
+                            & > .right {
+                                @include MB {
+                                    padding: m(16) m(13);
+                                }
+
+                                flex: 1;
+                                padding: p(46) p(30);
+                                padding-bottom: 0;
+
+                                & > .row {
+                                    @include MB {
+                                        gap: m(13);
+                                        margin-bottom: m(14);
+                                    }
+
+                                    display: flex;
+                                    gap: p(20);
+                                    align-items: center;
+                                    margin-bottom: p(29);
+
+                                    & > .name {
+                                        @include MB {
+                                            font-size: m(14);
+                                            line-height: m(16);
+                                            width: m(114);
+                                        }
+                                        font-size: p(22);
+                                        line-height: p(26);
+                                        width: p(186);
+                                    }
+
+                                    & > .progress {
+                                        @include MB {
+                                            height: m(6.6);
+                                            width: m(82);
+                                            border-radius: m(5);
+                                        }
+
+                                        height: p(10);
+                                        width: p(301);
+                                        background: linear-gradient(
+                                            90deg,
+                                            rgba(227, 32, 104, 0.5) 2.44%,
+                                            rgba(245, 0, 59, 0.5) 100%
+                                        );
+                                        border-radius: p(5);
+
+                                        & > .reach {
+                                            @include MB {
+                                                border-radius: m(5);
+                                            }
+
+                                            background: linear-gradient(90deg, #e32068 2.44%, #f5003b 100%);
+                                            border-radius: p(5);
+                                            height: 100%;
+                                        }
+                                    }
+
+                                    & > .average {
+                                        @include MB {
+                                            font-size: m(14);
+                                            line-height: m(16);
+                                        }
+
+                                        flex: 1;
+                                        font-weight: bold;
+                                        font-size: p(20);
+                                        line-height: p(23);
+                                    }
+                                }
+                            }
+                        }
+
+                        & > .add {
+                            @include MB {
+                                display: block;
+                                font-size: m(16);
+                                line-height: m(19);
+                                border-radius: m(5);
+                                padding: m(8.5);
+                                text-align: center;
+                                margin-top: m(26);
+                            }
+
+                            display: inline-block;
+                            font-weight: 500;
+                            font-size: p(20);
+                            line-height: p(23);
+                            background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                            border-radius: p(10);
+                            color: white;
+                            padding: p(12.5) p(55.5);
+                            cursor: pointer;
+                            margin-top: p(25);
+                        }
+
+                        & > .comments {
+                            @include MB {
+                                margin-top: m(27);
+                                gap: m(14);
+                                padding-bottom: m(20);
+                            }
+
+                            margin-top: p(42);
+                            display: flex;
+                            flex-direction: column;
+                            gap: p(17);
+                            padding-bottom: p(20);
+
+                            & > .comment {
+                                @include MB {
+                                    border-radius: m(20);
+                                    padding: m(12) m(19);
+                                }
+
+                                background: white;
+                                border-radius: p(20);
+                                @include box-shadow;
+                                padding: p(10) p(24);
+
+                                & > .head {
+                                    @include MB {
+                                        gap: m(6);
+                                    }
+
+                                    display: flex;
+                                    gap: p(19);
+                                    align-items: center;
+
+                                    & > .avatar {
+                                        @include MB {
+                                            width: m(49);
+                                            height: m(49);
+                                        }
+
+                                        width: p(49);
+                                        height: p(49);
+                                        img {
+                                            border-radius: 150%;
+                                            height: 100%;
+                                            width: 100%;
+                                        }
+                                    }
+
+                                    & > .info {
+                                        flex: 1;
+
+                                        & > .name {
+                                            @include MB {
+                                                font-size: m(20);
+                                                line-height: 120%;
+                                            }
+
+                                            font-weight: 500;
+                                            font-size: p(24);
+                                            line-height: 120%;
+                                        }
+
+                                        & > .bot {
+                                            @include MB {
+                                                gap: m(31);
+                                                margin-top: m(4);
+                                            }
+
+                                            display: flex;
+                                            align-items: center;
+                                            gap: p(18);
+                                            margin-top: p(4);
+
+                                            & > .star {
+                                                display: flex;
+                                                img {
+                                                    @include MB {
+                                                        width: m(13);
+                                                        gap: m(2.4);
+                                                    }
+
+                                                    width: p(16.6);
+                                                    gap: p(3);
+                                                }
+                                            }
+
+                                            & > .time {
+                                                @include MB {
+                                                    font-size: m(12);
+                                                    line-height: 120%;
+                                                    gap: m(3);
+                                                }
+
+                                                display: flex;
+                                                align-items: flex-end;
+                                                gap: p(7);
+                                                font-weight: 500;
+                                                font-size: p(14);
+                                                line-height: 120%;
+                                                color: rgba(52, 56, 70, 0.6);
+
+                                                & > .image {
+                                                    @include MB {
+                                                        width: m(12);
+                                                    }
+
+                                                    width: p(18);
+                                                }
+
+                                                & > .text {
+                                                    @include MB {
+                                                        transform: translateY(m(1));
+                                                    }
+                                                    transform: translateY(p(2));
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    & > .dot {
+                                        @include MB {
+                                            width: m(17);
+                                            align-self: flex-start;
+                                            transform: translateX(m(10));
+                                        }
+                                        width: p(40);
+                                    }
+                                }
+
+                                & > .body {
+                                    @include MB {
+                                        margin-top: m(15);
+                                    }
+
+                                    margin-top: p(13);
+
+                                    & > .content {
+                                        @include MB {
+                                            font-size: m(12);
+                                            line-height: m(14);
+                                            height: m(70);
+                                            width: m(350);
+                                        }
+
+                                        font-weight: 300;
+                                        font-size: p(20);
+                                        line-height: p(23);
+                                        height: p(90);
+                                        overflow: hidden;
+                                        width: p(780);
+                                        &.active {
+                                            height: auto;
+                                        }
+                                    }
+
+                                    & > .more {
+                                        @include MB {
+                                            font-size: m(14);
+                                            line-height: m(16);
+                                            margin-top: m(6);
+                                        }
+
+                                        font-weight: 500;
+                                        font-size: p(18);
+                                        line-height: p(21);
+                                        @include text-gradient;
+                                        position: relative;
+                                        display: inline-block;
+                                        cursor: pointer;
+
+                                        &::before {
+                                            @include MB {
+                                                width: m(10);
+                                                height: m(12);
+                                                top: m(2.5);
+                                                right: m(-17);
+                                            }
+
+                                            position: absolute;
+                                            content: "";
+                                            background: url("/images/main/product-more.svg");
+                                            background-size: contain;
+                                            background-repeat: no-repeat;
+                                            background-position: center;
+                                            width: p(10);
+                                            height: p(12);
+                                            top: p(5.5);
+                                            right: p(-17);
+                                        }
+                                    }
+                                }
+
+                                & > .foot {
+                                    @include MB {
+                                        display: none;
+                                    }
+
+                                    display: flex;
+                                    gap: p(10);
+                                    align-items: center;
+
+                                    & > .button {
+                                        display: block;
+                                        width: p(24);
+
+                                        &:nth-child(2) {
+                                            width: p(21);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        & > .button {
+                            & > .text {
+                                @include MB {
+                                    font-size: m(14);
+                                    line-height: m(16);
+                                    padding: m(10);
+                                    border-radius: m(5);
+                                    margin-top: m(20);
+                                }
+
+                                font-weight: bold;
+                                font-size: p(20);
+                                line-height: p(23);
+                                display: block;
+                                padding: p(12);
+                                background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                                border-radius: p(10);
+                                color: white;
+                                border-radius: p(10);
+                                margin-top: p(20);
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & > .right {
+                @include MB {
+                    order: 1;
+                    background: white;
+                    border-radius: m(10);
+                    @include box-shadow;
+                    padding: m(21) m(9);
+                    margin-left: m(16);
+                    margin-right: m(16);
+                    transform: translateY(m(5));
+                }
+
+                flex: 1;
+
+                & > .top {
+                    @include MB {
+                        box-shadow: unset !important;
+                        border-radius: p(0);
+                        padding: p(0) p(0);
+                        margin-bottom: p(0);
+                        display: flex;
+                        row-gap: m(8);
+                        column-gap: m(16);
+                        flex-wrap: wrap;
+                    }
+
+                    @include box-shadow;
+                    border-radius: p(10);
+                    padding: p(30) p(56);
+                    margin-bottom: p(8);
+
+                    & > .row {
+                        @include MB {
+                            gap: m(7);
+                        }
+
+                        display: flex;
+                        align-items: center;
+                        gap: p(31);
+                        &:not(:first-child) {
+                            @include MB {
+                                margin-top: p(0);
+                            }
+                            margin-top: p(21);
+                        }
+
+                        & > .image {
+                            @include MB {
+                                width: m(14);
+                                transform: translateY(m(-2));
+                            }
+
+                            width: p(23);
+                            transform: translateY(p(-3));
+                        }
+
+                        & > .text {
+                            @include MB {
+                                font-size: m(12);
+                                line-height: m(14);
+                            }
+
+                            flex: 1;
+                            font-size: p(20);
+                            line-height: p(23);
+
+                            span {
+                                @include text-gradient;
+                            }
+                        }
+                    }
+                }
+
+                & > .bot {
+                    @include MB {
+                        box-shadow: unset !important;
+                        border-radius: p(0);
+                        padding: p(0) p(0);
+                    }
+
+                    @include box-shadow;
+                    border-radius: p(10);
+                    padding: p(20) p(33);
+
+                    & > .head {
+                        @include MB {
+                            margin-top: m(8);
+                            border-bottom: unset;
+                        }
+
+                        border-bottom: p(1) black solid;
+                        & > .top {
+                            @include MB {
+                                gap: m(4);
+                            }
+
+                            display: flex;
+                            gap: p(27);
+                            align-items: center;
+
+                            & > .image {
+                                @include MB {
+                                    width: m(30);
+                                    height: m(30);
+                                }
+
+                                width: p(40);
+                                height: p(40);
+                                img {
+                                    border-radius: 150%;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+
+                            & > .text {
+                                @include MB {
+                                    font-size: m(12);
+                                    line-height: m(14);
+                                }
+
+                                flex: 1;
+                                font-size: p(24);
+                                line-height: p(28);
+                            }
+                        }
+
+                        & > .bot {
+                            @include MB {
+                                margin-top: m(8);
+                                margin-bottom: p(0);
+                            }
+
+                            display: flex;
+                            margin-top: p(16);
+                            margin-bottom: p(17);
+
+                            & > .image {
+                                @include MB {
+                                    width: m(30);
+                                }
+
+                                width: p(40);
+                                position: relative;
+
+                                img {
+                                    @include MB {
+                                        // border: m(1) white solid;
+                                    }
+                                    border-radius: 150%;
+                                    // border: p(1) white solid;
+                                }
+
+                                &:nth-child(1) {
+                                    z-index: 3;
+                                }
+
+                                &:nth-child(2) {
+                                    // transform: translateX(-20%);
+                                    z-index: 2;
+                                }
+
+                                &:nth-child(3) {
+                                    // transform: translateX(-40%);
+                                    z-index: 1;
+                                }
+                            }
+
+                            & > .text {
+                                @include MB {
+                                    width: m(30);
+                                    height: m(30);
+                                    // transform: translate(-60%, m(2));
+                                    font-size: m(8);
+                                    line-height: m(10);
+                                }
+
+                                width: p(40);
+                                height: p(40);
+                                background: linear-gradient(225deg, #e32068 14.64%, #f5003b 85.36%);
+                                border-radius: 150%;
+                                font-weight: 500;
+                                font-size: p(16);
+                                line-height: p(19);
+                                color: white;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                transform: translateY(p(3));
+                                z-index: 0;
+                            }
+                        }
+                    }
+
+                    & > .body {
+                        @include MB {
+                            padding-top: m(11);
+                        }
+
+                        padding-top: p(23);
+
+                        & > .row {
+                            @include MB {
+                                gap: m(18);
+                                margin-bottom: m(10);
+                            }
+
+                            display: flex;
+                            gap: p(13);
+                            margin-bottom: p(15);
+
+                            & > .left {
+                                @include MB {
+                                    width: m(30);
+                                    height: m(30);
+                                }
+
+                                width: p(38);
+                                height: p(38);
+                                img {
+                                    border-radius: 150%;
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+
+                            & > .right {
+                                flex: 1;
+
+                                & > .top {
+                                    @include MB {
+                                        font-size: m(12);
+                                        line-height: m(14);
+                                    }
+
+                                    font-weight: 500;
+                                    font-size: p(16);
+                                    line-height: p(19);
+                                    @include text-gradient;
+                                }
+
+                                & > .bot {
+                                    @include MB {
+                                        gap: m(18);
+                                        margin-top: m(2);
+                                    }
+
+                                    display: flex;
+                                    gap: p(10);
+                                    align-items: center;
+                                    margin-top: p(5);
+
+                                    & > .progress {
+                                        @include MB {
+                                            width: m(249);
+                                            height: m(5);
+                                            border-radius: m(5);
+                                        }
+
+                                        width: p(237);
+                                        height: p(13);
+                                        background: rgba(214, 215, 218, 1);
+                                        border-radius: p(10);
+
+                                        & > .reach {
+                                            @include MB {
+                                                border-radius: m(5);
+                                            }
+
+                                            background: #343846;
+                                            border-radius: p(10);
+                                            height: 100%;
+                                        }
+                                    }
+
+                                    & > .text {
+                                        @include MB {
+                                            font-size: m(12);
+                                            line-height: m(14);
+                                        }
+
+                                        flex: 1;
+                                        font-weight: 500;
+                                        font-size: p(16);
+                                        line-height: p(19);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & > .session_related {
+        @include MB {
+            padding-top: m(38);
+            padding-bottom: m(71);
+            padding-left: m(0);
+            padding-right: m(0);
+            background: white;
+        }
+
+        padding-top: p(47);
+        padding-bottom: p(72);
+        padding-left: p(315);
+        padding-right: p(315);
+
+        & > .head {
+            @include MB {
+                padding-left: m(16);
+                padding-right: m(16);
+            }
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & > .left {
+                @include MB {
+                    font-size: m(20);
+                    line-height: m(23);
+                }
+
+                font-weight: bold;
+                font-size: p(48);
+                line-height: p(56);
+            }
+
+            & > .right {
+                @include MB {
+                    font-size: m(12);
+                    line-height: m(14);
+                    margin-right: m(10);
+                }
+
+                font-weight: 500;
+                font-size: p(24);
+                line-height: p(28);
+                @include text-gradient;
+                position: relative;
+                margin-right: p(10);
+
+                &::after {
+                    @include MB {
+                        width: m(9);
+                        height: m(6);
+                        top: m(5);
+                        right: m(-10);
+                    }
+
+                    content: "";
+                    position: absolute;
+                    background: url("/images/main/product-32.svg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: p(10);
+                    height: p(10);
+                    top: p(10);
+                    right: p(-14);
+                }
+            }
+        }
+
+        .body {
+            @include MB {
+                padding-left: m(0);
+                padding-right: m(0);
+                margin-top: m(17);
+            }
+
+            margin-top: p(18);
+            .slide_item {
+                @include MB {
+                    padding: m(9);
+                    padding-bottom: m(20);
+                }
+                padding-top: p(10);
+                padding-bottom: p(10);
+                padding-left: p(5);
+                padding-right: p(5);
+                height: 100%;
+            }
+        }
+    }
+}
+
+.popup_discussion {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+
+    &.active {
+        display: flex;
+    }
+
+    & > .box {
+        @include MB {
+            width: m(305);
+            border-radius: m(10);
+            padding: m(27) m(21);
+            position: relative;
+        }
+
+        width: p(759);
+        height: auto;
+        border-radius: p(10);
+        @include box-shadow;
+        background: white;
+        padding: p(34);
+        padding-top: p(10);
+
+        & > .close {
+            @include MB {
+                margin-bottom: m(0);
+            }
+
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: p(10);
+
+            & > .button {
+                @include MB {
+                    width: m(16);
+                    transform: unset;
+                    position: absolute;
+                    top: m(1);
+                    right: m(8);
+                }
+
+                width: p(20);
+                cursor: pointer;
+                transform: translateX(p(20));
+            }
+        }
+
+        & > .input {
+            textarea {
+                @include MB {
+                    height: m(178);
+                    border-radius: m(10);
+                    font-size: m(16);
+                    line-height: 120%;
+                    padding: m(15);
+                }
+
+                border: none;
+                width: 100%;
+                height: p(112);
+                border-radius: p(10);
+                background: #efefef;
+                font-size: p(20);
+                line-height: 120%;
+                resize: none;
+                padding: p(20);
+
+                &.disable {
+                    font-weight: 300;
+                    font-size: p(20);
+                    line-height: 150%;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        & > .rates {
+            @include MB {
+                margin-bottom: m(8);
+            }
+
+            margin-bottom: p(20);
+            & > .rate {
+                @include MB {
+                    gap: m(15);
+                    font-size: m(16);
+                    line-height: m(19);
+                    margin-bottom: m(12);
+                }
+
+                display: flex;
+                gap: p(119);
+                align-items: center;
+                font-size: p(24);
+                line-height: p(28);
+                margin-bottom: p(20);
+
+                & > .left {
+                    @include MB {
+                        width: m(135);
+                    }
+
+                    width: p(203);
+                }
+
+                & > .right {
+                    @include MB {
+                        gap: m(3.35);
+                    }
+
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    gap: p(6.7);
+
+                    span {
+                        @include MB {
+                            width: m(18);
+                            height: m(18);
+                        }
+
+                        width: p(37);
+                        height: p(37);
+                        background: url("/images/main/learning-19.svg");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        cursor: pointer;
+
+                        &.active {
+                            background: url("/images/main/learning-18.svg");
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                        }
+                    }
+
+                    // img {
+                    //     width: p(37);
+                    // }
+                }
+            }
+        }
+
+        & > .button {
+            @include MB {
+                font-size: m(16);
+                line-height: m(19);
+                border-radius: m(5);
+                padding: m(8.5);
+                margin-top: m(16);
+                display: block;
+                text-align: center;
+            }
+
+            display: inline-block;
+            border-radius: p(10);
+            background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+            font-weight: 500;
+            font-size: p(20);
+            line-height: p(23);
+            color: white;
+            padding: p(12.5) p(55);
+            cursor: pointer;
+            margin-top: p(8);
+        }
+    }
+}

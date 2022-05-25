@@ -1,0 +1,68 @@
+@import "../general";
+
+.container {
+    @include MB{
+        height: m(220);
+        border-radius: m(10);
+        padding: m(20) m(30) ;
+    }
+ 
+    background: url("/images/banner-membership2.jpg"), url("/images/banner-membership1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: p(336);
+    border-radius: p(10);
+    padding: p(46) p(120) ;
+    color: white;
+
+    & > .title {
+        @include MB{
+            font-size: m(28);
+            line-height: m(32);
+            margin-bottom: m(10);
+        }
+
+        font-weight: bold;
+        font-size: p(48);
+        line-height: p(56);
+        margin-bottom: p(27.5);
+    }
+
+    & > .description {
+        @include MB{
+            font-size: m(12);
+            line-height: 120%;
+            margin-bottom: m(25);
+            width: 100%;
+        }
+
+        font-weight: normal;
+        font-size: p(20);
+        line-height: 120%;
+        margin-bottom: p(74);
+        width: p(831);
+    }
+
+    & > .button {
+        a {
+            @include MB{
+                font-size: m(14);
+                line-height: m(16);
+                padding: m(10) m(30);
+                border-radius: m(5);
+            }
+
+            font-weight: bold;
+            font-size: p(20);
+            line-height: p(23);
+            padding: p(13) p(100);
+            background: white;
+            border-radius: p(5);
+            span{
+                @include text-gradient;
+            }
+            
+        }
+    }
+}

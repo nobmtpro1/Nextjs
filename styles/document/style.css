@@ -1,0 +1,483 @@
+@media only screen and (min-width: 1024px) {
+    main {
+        /* animation: fadein 500ms ease-out; */
+    }
+}
+
+@keyframes fadein {
+    0% {
+        transform: translateY(-5px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#document-project-page .slick-next {
+    left: 102%;
+    top: 50%;
+}
+
+#document-project-page .slick-next::before {
+    font-size: 2vw;
+}
+
+#document-project-page .slick-prev {
+    left: -3.5%;
+    top: 50%;
+}
+
+#document-project-page .slick-prev::before {
+    font-size: 2vw;
+}
+
+#document-glossary-detail-page .slick-slide:not(:first-child) {
+    padding-left: 1vw;
+}
+
+#document-glossary-detail-page .slick-track {
+    padding-bottom: 4vw;
+    padding-top: 2vw;
+}
+
+#document-glossary-detail-page .slick-dots li button::before {
+    width: 1.93vw;
+    height: 1.93vw;
+    border-radius: 100%;
+    background: rgba(249, 0, 59, 0.2);
+    content: "";
+    opacity: 1;
+}
+
+#document-glossary-detail-page .slick-dots li.slick-active button::before {
+    width: 1.93vw;
+    height: 1.93vw;
+    border-radius: 100%;
+    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+    content: "";
+    opacity: 1;
+}
+
+/* 
+
+popup login 
+
+*/
+.document-popup-login {
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transform: scale(0);
+    transition: all ease-in-out 300ms;
+}
+
+.document-popup-login.active {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.document-popup-login .box {
+    width: 28.6vw;
+    height: 8.68vw;
+    background: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.6vw;
+    padding-bottom: 1vw;
+    background: #f5f5f5;
+    box-shadow: 0px 0.2vw 0.2vw rgba(0, 0, 0, 0.25);
+    border-radius: 0.52vw;
+}
+
+.document-popup-login .box .title {
+    font-size: 1.24vw;
+    font-weight: 500;
+    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.document-popup-login .box .button button {
+    width: 25.42vw;
+    height: 2.49vw;
+    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+    border-radius: 0.52vw;
+    border: none;
+    color: white;
+    font-size: 1.04vw;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1024px) {
+    .document-popup-login .box {
+        width: 84.5vw;
+        height: 33.57vw;
+        gap: 8.6vw;
+        padding-bottom: 5.31vw;
+        padding-top: 2vw;
+        box-shadow: 0px 1vw 1vw rgba(0, 0, 0, 0.25);
+        border-radius: 2.415vw;
+    }
+
+    .document-popup-login .box .title {
+        font-size: 5.79vw;
+    }
+
+    .document-popup-login .box .button button {
+        width: 75.84vw;
+        height: 8.69vw;
+        border-radius: 1.2vw;
+        font-size: 3.86vw;
+    }
+}
+/* 
+
+end popup login 
+
+*/
+
+/* 
+
+popup success 
+
+*/
+.document-popup-success {
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transform: scale(0);
+    transition: all ease-in-out 300ms;
+}
+
+.document-popup-success.active {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.document-popup-success .box {
+    width: 28.6vw;
+    height: 25.11vw;
+    background: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vw;
+    padding-bottom: 1vw;
+    background: #f5f5f5;
+    box-shadow: 0px 0.2vw 0.2vw rgba(0, 0, 0, 0.25);
+    border-radius: 0.52vw;
+}
+
+.document-popup-success .box .title {
+    width: 20.02vw;
+    text-align: center;
+    font-size: 1.24vw;
+    font-weight: 500;
+    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 1vw;
+}
+
+.document-popup-success .box .circle {
+    width: 9.1vw;
+    height: 9.1vw;
+    border-radius: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.24vw;
+    padding: 1vw;
+    font-weight: 500;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 2vw;
+}
+
+.document-popup-success .box .circle .text {
+    width: 9.1vw;
+    height: 9.1vw;
+    border-radius: 100%;
+    box-sizing: border-box;
+    /* border: 0.88vw rgba(227, 32, 104, 1) solid; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.24vw;
+    padding: 1vw;
+    font-weight: 500;
+    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    z-index: 2;
+    line-height: 1.2;
+    padding-bottom: 1.5vw;
+}
+
+.document-popup-success .box .circle::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    width: 9.1vw;
+    height: 9.1vw;
+    border-radius: 100%;
+    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+    transform: translate(-50%, -50%);
+}
+
+.document-popup-success .box .circle::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 7.2vw;
+    height: 7.2vw;
+    border-radius: 100%;
+    background: #f5f5f5;
+    transform: translate(-50%, -50%);
+}
+
+.document-popup-success .box .text {
+    font-size: 1.04vw;
+    font-weight: 300;
+    padding-bottom: 0.5vw;
+    width: 70%;
+    text-align: center;
+}
+
+.document-popup-success .box .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.83vw;
+}
+
+.document-popup-success .box .button .left button {
+    width: 12.32vw;
+    height: 2.44vw;
+    border: none;
+    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+    border-radius: 0.52vw;
+    color: white;
+    font-size: 1.04vw;
+}
+
+.document-popup-success .box .button .right button {
+    width: 12.32vw;
+    height: 2.44vw;
+    border: none;
+    border-radius: 0.52vw;
+    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.04vw;
+    border: 0.05vw rgba(227, 32, 104, 1) solid;
+}
+
+@media only screen and (max-width: 1024px) {
+    .document-popup-success .box {
+        width: 73.67vw;
+        height: auto;
+        gap: 4.34vw;
+        padding-bottom: 5vw;
+        padding-top: 3vw;
+        box-shadow: 0px 0.96vw 0.96vw rgba(0, 0, 0, 0.25);
+        border-radius: 2.41vw;
+    }
+
+    .document-popup-success .box .title {
+        width: 60.38vw;
+        font-size: 3.86vw;
+        padding-top: 0;
+    }
+
+    .document-popup-success .box .circle {
+        width: 28.2vw;
+        height: 28.2vw;
+        border-radius: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.24vw;
+        padding: 1vw;
+        font-weight: 500;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 0;
+    }
+
+    .document-popup-success .box .circle .text {
+        width: 28.2vw;
+        height: 28.2vw;
+        font-size: 3.86vw;
+        padding: 5vw;
+        padding-bottom: 6vw;
+    }
+
+    .document-popup-success .box .circle::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: -1;
+        width: 28.2vw;
+        height: 28.2vw;
+        border-radius: 100%;
+        background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+        transform: translate(-50%, -50%);
+    }
+
+    .document-popup-success .box .circle::after {
+        width: 22.55vw;
+        height: 22.55vw;
+    }
+
+    .document-popup-success .box .text {
+        font-size: 2.89vw;
+        padding-bottom: 0.5vw;
+        width: 50.48vw;
+        text-align: center;
+    }
+
+    .document-popup-success .box .button {
+        flex-direction: column;
+        gap: 1.69vw;
+    }
+
+    .document-popup-success .box .button .left button {
+        width: 57.24vw;
+        height: 8.69vw;
+        border: none;
+        background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+        border-radius: 1.2vw;
+        color: white;
+        font-size: 3.86vw;
+    }
+
+    .document-popup-success .box .button .right button {
+        width: 57.24vw;
+        height: 8.69vw;
+        border: none;
+        border-radius: 1.2vw;
+        background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 3.86vw;
+        border: 0.05vw rgba(227, 32, 104, 1) solid;
+    }
+}
+/* 
+
+end popup success 
+
+*/
+
+/* 
+
+popup saved 
+
+*/
+.document-popup-saved {
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transform: scale(0);
+    transition: all ease-in-out 300ms;
+}
+
+.document-popup-saved.active {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.document-popup-saved .box {
+    width: 28.6vw;
+    height: 11.23vw;
+    background: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5vw;
+    padding-bottom: 1vw;
+    padding-top: 1.7vw;
+    background: #f5f5f5;
+    box-shadow: 0px 0.2vw 0.2vw rgba(0, 0, 0, 0.25);
+    border-radius: 0.52vw;
+}
+
+.document-popup-saved .box .image {
+    width: 5vw;
+}
+
+.document-popup-saved .box .image img {
+    width: 100%;
+}
+
+.document-popup-saved .box .text {
+    font-size: 1.24vw;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 1024px) {
+    .document-popup-saved .box {
+        width: 84.54vw;
+        height: 38.64vw;
+        gap: 5.55vw;
+        padding-bottom: 1vw;
+        padding-top: 1.7vw;
+        background: #f5f5f5;
+        box-shadow: 0px 0.96vw 0.96vw rgba(0, 0, 0, 0.25);
+        border-radius: 2.41vw;
+    }
+
+    .document-popup-saved .box .image {
+        width: 14.49vw;
+    }
+
+    .document-popup-saved .box .text {
+        font-size: 4.83vw;
+        font-weight: 500;
+    }
+}
+/* 
+
+end popup saved 
+
+*/

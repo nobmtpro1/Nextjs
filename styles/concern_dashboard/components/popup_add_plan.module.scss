@@ -1,0 +1,83 @@
+@import "../general";
+
+.container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    &.active {
+        display: flex;
+    }
+
+    & > .form {
+        @include MB {
+            width: m(350);
+            border-radius: m(5);
+            padding: m(20);
+        }
+        background: white;
+        width: p(700);
+        height: auto;
+        border-radius: p(10);
+        @include box-shadow;
+        padding: p(40);
+
+        & > .input {
+            @include MB {
+                height: m(50);
+                margin-bottom: m(20);
+            }
+
+            width: 100%;
+            height: p(50);
+            margin-bottom: p(20);
+            display: flex;
+            input {
+                @include MB {
+                    border-radius: m(5);
+                    padding: m(20);
+                }
+
+                width: 100%;
+                height: 100%;
+                background: #efefef;
+                border-radius: p(5);
+                border: none;
+                padding: p(20);
+            }
+            button {
+                @include MB {
+                    padding: m(10) m(30);
+                    border-radius: m(5);
+                    font-size: m(19);
+                }
+
+                padding: p(10) p(30);
+                border-radius: p(10);
+                background: #ee0b4a;
+                color: white;
+                font-size: p(19);
+            }
+
+            & > .button {
+                @include MB {
+                    width: m(30);
+                    transform: translateY(0);
+                }
+
+                cursor: pointer;
+                width: p(30);
+                display: inline-block;
+                margin-left: auto;
+                transform: translateY(p(-20));
+            }
+        }
+    }
+}

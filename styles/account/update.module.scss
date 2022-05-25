@@ -1,0 +1,255 @@
+@import "general";
+
+.update_page {
+    @include MB {
+        flex-direction: column;
+        gap: 3.86vw;
+        margin-top: 3vw;
+    }
+
+    display: flex;
+    gap: 1.56vw;
+
+    .left,
+    .right {
+        @include MB {
+            width: 100%;
+        }
+        width: 50%;
+    }
+
+    .box {
+        @include MB {
+            gap: 3.86vw;
+            margin-top: 0;
+            padding: 4.83vw;
+            padding-bottom: 1.3vw;
+            border-radius: 2.41vw;
+        }
+
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 0.83vw;
+        margin-top: 1.875vw;
+
+        background: white;
+        padding: 1.92vw;
+        padding-bottom: 1.3vw;
+        @include box-shadow;
+        border-radius: 0.52vw;
+
+        .title {
+            @include MB {
+                font-size: 4.83vw;
+                @include text-gradient;
+            }
+            font-size: 2.5vw;
+            font-weight: 500;
+        }
+
+        .input_group {
+            position: relative;
+
+            .placeholder {
+                @include MB {
+                    font-size: 3.86vw;
+                    top: 3vw;
+                    left: 2.41vw;
+                }
+
+                position: absolute;
+                font-size: 0.83vw;
+                top: 0.88vw;
+                left: 1.14vw;
+
+                &.hide {
+                    display: none;
+                }
+            }
+
+            .input,
+            .input_select {
+                @include MB {
+                    height: 11.6vw;
+                    border-radius: 1.2vw;
+                    font-size: 3.86vw;
+                    padding: 0.88vw 2.41vw;
+                }
+
+                width: 100%;
+                height: 2.5vw;
+                background: #efefef;
+                border-radius: 0.26vw;
+                border: none;
+                font-size: 0.83vw;
+                padding: 0.88vw 1.14vw;
+
+                &:focus {
+                    outline: none;
+                }
+
+                &.file {
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                }
+            }
+
+            .input_select {
+                @include MB {
+                    padding: 0.88vw 2vw;
+                    background-position-x: m(310);
+                }
+                padding: 0.5vw 0.9vw;
+
+                background: url("../../public/images/select.svg") no-repeat right #efefef;
+                -webkit-appearance: none;
+                background-position-x: p(520);
+            }
+
+            &.textarea {
+                margin-bottom: 0;
+                textarea {
+                    @include MB {
+                        height: 88.64vw;
+                    }
+                    height: 19.11vw;
+                    resize: none;
+                }
+
+                &.small {
+                    textarea {
+                        @include MB {
+                            height: 29.95vw !important;
+                        }
+                        height: 6.45vw !important;
+                    }
+                }
+            }
+        }
+
+        .input_group_container {
+            @include MB {
+                gap: 1.93vw;
+            }
+
+            display: flex;
+            justify-content: flex-start;
+            gap: 0.572vw;
+
+            & .input_group {
+                width: 24%;
+                &:nth-child(1) {
+                    width: 50%;
+                    &::after {
+                        display: none;
+                    }
+                }
+                .input,
+                .input_select {
+                    @include MB {
+                        height: 11.59vw;
+                        font-size: 3.86vw;
+                        border-radius: 1.2vw;
+                    }
+
+                    width: 100%;
+                    height: 2.5vw;
+                    background: #efefef;
+                    border-radius: 0.26vw;
+                    border: none;
+                    font-size: 0.83vw;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                &:after {
+                    @include MB {
+                        width: 1.69vw;
+                        height: 1.69vw;
+                        right: 2.14vw;
+                    }
+                    position: absolute;
+                    content: "";
+                    width: 0.41vw;
+                    height: 0.45vw;
+                    top: 50%;
+                    right: 1.14vw;
+                    background: url("/images/account-header-dropdown-black.svg");
+                    background-size: contain;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    transform: translateY(-50%);
+                }
+
+                .input_select {
+                    @include MB {
+                        padding-left: 2.14vw;
+                    }
+                    padding-left: 1.14vw;
+                    -moz-appearance: none; /* Firefox */
+                    -webkit-appearance: none; /* Safari and Chrome */
+                    appearance: none;
+                    position: relative;
+                }
+            }
+        }
+
+        .policy {
+            @include MB {
+                font-size: 2.41vw;
+                margin-top: 0vw;
+                transform: translateY(-2.5vw);
+            }
+
+            margin-top: 0vw;
+            font-size: 0.625vw;
+            transform: translateY(-0.5vw);
+
+            .link {
+                @include text-gradient;
+            }
+        }
+
+        .button {
+            @include MB {
+                flex-direction: column;
+                transform: translateY(-4.5vw);
+                gap: 1.83vw;
+            }
+
+            display: flex;
+            gap: 0.83vw;
+            transform: translateY(-0.5vw);
+
+            button {
+                @include MB {
+                    width: 100%;
+                    height: 8.69vw;
+                    font-size: 3.86vw;
+                    border-radius: 1.2vw;
+                    font-weight: 500;
+                    margin-top: 0;
+                }
+
+                margin-top: 0vw;
+                width: 11.875vw;
+                height: 2.5vw;
+                background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                border: none;
+                border-radius: 0.52vw;
+                color: white;
+                font-size: 1.04vw;
+                font-weight: bold;
+
+                &:nth-child(2) {
+                    background: white;
+                    @include text-gradient;
+                    border: 0.052vw solid #f9003b;
+                }
+            }
+        }
+    }
+}

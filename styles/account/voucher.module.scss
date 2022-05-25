@@ -1,0 +1,42 @@
+@import "./aim_coin.module.scss";
+
+.aim_coin_page {
+    .items_1 {
+        .item_2 {
+            .image_3 {
+                @include MB{
+                    width: m(118);
+                };
+                width: p(136);
+            }
+
+            .text_3 {
+                @include MB{
+                    padding-bottom: 0
+                };
+
+                .button_4 {
+                    a {
+                        @include MB{
+                            font-size: m(14);
+                            line-height: m(16);
+                            padding: m(10) m(32);
+                            border-radius: m(5);
+                            margin-top: m(15);
+                        };
+
+                        font-weight: 500;
+                        font-size: p(14);
+                        line-height: p(16);
+                        color: white;
+                        display: inline-block;
+                        padding: p(10) p(32);
+                        background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                        border-radius: p(5);
+                        margin-top: p(13);
+                    }
+                }
+            }
+        }
+    }
+}

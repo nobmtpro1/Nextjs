@@ -1,0 +1,43 @@
+@import "./test.module.scss";
+
+.banner {
+    padding-left: 17.5vw;
+    padding-right: 17.5vw;
+
+    .left {
+        padding-left: 0;
+        position: relative;
+
+        .text {
+            @include MB {
+                left: 0;
+            }
+            position: relative;
+            left: -5vw;
+        }
+    }
+    .right {
+        position: relative;
+        .image {
+            position: relative;
+            left: -4vw;
+            bottom: 0;
+            img {
+                width: 77%;
+            }
+        }
+    }
+}
+
+.more_document {
+    .boxes {
+        @include PC {
+            transform: translateX(0.7%);
+        }
+        .box {
+            @include PC {
+                width: 21.4vw;
+            }
+        }
+    }
+}

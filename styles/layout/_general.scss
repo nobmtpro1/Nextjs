@@ -1,0 +1,45 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@mixin PC {
+    @media (min-width: 1025px) {
+        @content;
+    }
+}
+
+@mixin MB {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+@function p($size) {
+    @return (math.div($size, 1920)) * 100vw;
+}
+
+@function m($size) {
+    @return (math.div($size, 414)) * 100vw;
+}
+
+@mixin box-shadow {
+    @include MB {
+        box-shadow: 0px 0.96vw 4.83vw rgba(0, 0, 0, 0.15);
+    }
+    box-shadow: 0px 0.2vw 1.04vw rgba(0, 0, 0, 0.15);
+}
+
+@mixin text-gradient {
+    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+@mixin button-hover {
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        transform: translateY(p(-3));
+        // box-shadow: rgba(99, 99, 99, 0.2) 0px p(2) p(8) 0px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px p(6) p(12) p(-2), rgba(0, 0, 0, 0.3) 0px p(3) p(7) p(-3);
+    }
+}

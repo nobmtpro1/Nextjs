@@ -1,0 +1,507 @@
+@import "general";
+
+.order_lifetime_page {
+    .head {
+        @include MB {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 0;
+            gap: m(10);
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: p(25);
+
+        .left {
+            @include MB {
+                font-size: m(20);
+            }
+
+            font-size: p(48);
+            color: #343846;
+            font-weight: bold;
+        }
+
+        .right {
+            @include MB {
+                gap: m(19);
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: p(19);
+            position: relative;
+            cursor: pointer;
+
+            .date {
+                @include MB {
+                    width: m(300);
+                    height: m(40);
+                    border: m(1) rgba(227, 32, 104, 1) solid;
+                    border-radius: m(5);
+                }
+                width: p(178);
+                height: p(49);
+                position: relative;
+                border: p(1) rgba(227, 32, 104, 1) solid;
+                border-radius: p(10);
+                z-index: 1;
+
+                .image {
+                    @include MB {
+                        left: m(20);
+                        top: m(1);
+                        width: m(20);
+                    }
+
+                    position: absolute;
+                    left: p(16);
+                    top: p(1);
+                    width: p(21);
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .placeholder {
+                    @include MB {
+                        left: m(50);
+                        top: m(5);
+                        font-size: m(20);
+                    }
+
+                    position: absolute;
+                    left: p(50);
+                    top: p(8);
+                    font-size: p(20);
+                    font-weight: 500;
+                    @include text-gradient;
+
+                    span {
+                        @include MB {
+                            font-size: m(20);
+                        }
+
+                        font-size: p(20);
+                        font-weight: 500;
+                        @include text-gradient;
+                        position: relative;
+                        &::before {
+                            @include MB {
+                                width: m(10);
+                                height: m(9);
+                                right: m(-80);
+                                top: m(7);
+                            }
+
+                            position: absolute;
+                            content: "";
+                            width: p(10);
+                            height: p(9);
+                            right: p(-80);
+                            top: p(7);
+                            background: url("/images/account-orderlifetime-1.svg");
+                            background-size: contain;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
+                    }
+                }
+
+                input {
+                    cursor: pointer;
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border: none;
+                    background: transparent;
+                }
+            }
+        }
+    }
+
+    .menu {
+        @include MB {
+            justify-content: space-between;
+        }
+
+        display: flex;
+        position: relative;
+        margin-top: p(22);
+
+        &::before {
+            @include MB {
+                height: m(8);
+                border-radius: m(5);
+            }
+
+            position: absolute;
+            content: "";
+            bottom: 0;
+            height: p(8);
+            width: 100%;
+            left: 0;
+            border-radius: p(5);
+            background: rgba(249, 0, 59, 0.2);
+        }
+
+        .text {
+            @include MB {
+                font-weight: 500;
+                font-size: m(20);
+                padding: m(15) m(33);
+            }
+
+            padding: p(17) p(46);
+            font-size: p(24);
+            font-weight: bold;
+            line-height: 120%;
+            color: #343846;
+            cursor: pointer;
+
+            &.active {
+                position: relative;
+                &::before {
+                    @include MB {
+                        height: m(8);
+                        border-radius: m(5);
+                    }
+
+                    position: absolute;
+                    height: p(8);
+                    width: 100%;
+                    content: "";
+                    left: 0;
+                    bottom: 0;
+                    border-radius: p(5);
+                    background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                }
+            }
+        }
+    }
+
+    .body_1 {
+        @include MB {
+            margin-top: m(19);
+        }
+        margin-top: p(49);
+        .head_2 {
+            @include MB {
+                font-size: m(8);
+                line-height: m(23);
+                border-radius: m(5);
+            }
+
+            font-weight: 500;
+            font-size: p(20);
+            line-height: p(23);
+            background: #343846;
+            border-radius: p(10);
+            @include box-shadow;
+            color: white;
+            display: flex;
+
+            .text_3 {
+                @include MB {
+                    padding-left: m(10);
+                    padding-top: m(10);
+                    padding-bottom: m(10);
+                    white-space: normal;
+                }
+
+                flex: 1;
+                padding-left: p(52);
+                padding-top: p(24);
+                padding-bottom: p(17);
+                white-space: nowrap;
+
+                &:nth-child(2) {
+                    flex: 0.7;
+                }
+
+                &:nth-child(4),
+                &:nth-child(5) {
+                    flex: 0.5;
+                }
+            }
+        }
+
+        .body_2 {
+            @include MB {
+                margin-top: m(10);
+            }
+
+            margin-top: p(18);
+            .item_3 {
+                @include MB {
+                    margin-top: m(10);
+                    border-radius: m(5);
+                }
+
+                @include box-shadow;
+                border-radius: p(10);
+                background: white;
+                margin-top: p(18);
+
+                &.active {
+                    .head_4 {
+                        @include MB {
+                            border-bottom: m(1) black solid;
+                        }
+
+                        border-bottom: p(1) black solid;
+
+                        &::before {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    .body_4 {
+                        display: flex;
+                    }
+                }
+
+                .head_4 {
+                    @include MB {
+                        font-size: m(8);
+                        line-height: m(23);
+                    }
+
+                    font-weight: 500;
+                    font-size: p(20);
+                    line-height: p(23);
+                    color: #343846;
+                    display: flex;
+                    cursor: pointer;
+                    // border-bottom: p(1) black solid;
+                    position: relative;
+
+                    &::before {
+                        @include MB {
+                            width: m(8);
+                            height: m(9);
+                            right: m(5);
+                            top: m(16);
+                        }
+
+                        position: absolute;
+                        content: "";
+                        background: url("/images/account-header-dropdown-black.svg");
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: p(10);
+                        height: p(9);
+                        right: p(20);
+                        top: p(30);
+                    }
+
+                    .text_5 {
+                        @include MB {
+                            padding-left: m(10);
+                            padding-top: m(10);
+                            padding-bottom: m(10);
+                        }
+
+                        flex: 1;
+                        padding-left: p(52);
+                        padding-top: p(24);
+                        padding-bottom: p(17);
+                        // white-space: nowrap;
+
+                        &:nth-child(2) {
+                            flex: 0.7;
+                        }
+
+                        &:nth-child(4),
+                        &:nth-child(5) {
+                            flex: 0.5;
+                        }
+                    }
+                }
+
+                .body_4 {
+                    @include MB {
+                        padding-bottom: m(10);
+                        padding-left: m(10);
+                        padding-top: m(10);
+                        padding-right: m(10);
+                    }
+
+                    padding-bottom: p(25);
+                    padding-left: p(49);
+                    padding-top: p(30);
+                    padding-right: p(162);
+                    display: flex;
+                    flex-wrap: wrap;
+                    display: none;
+
+                    .item_5 {
+                        @include MB {
+                            padding: m(5);
+                            border-radius: m(5);
+                            gap: m(2);
+                            padding-bottom: m(10);
+                            width: m(111);
+                            margin-right: m(8);
+                            margin-bottom: m(8);
+                        }
+
+                        background: white;
+                        @include box-shadow;
+                        padding: p(5);
+                        border-radius: p(10);
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        padding-bottom: p(9);
+                        width: p(180);
+                        margin-right: p(36);
+                        margin-bottom: p(36);
+
+                        .image {
+                            img {
+                                @include MB {
+                                    border-radius: m(5);
+                                }
+                                border-radius: p(10);
+                            }
+                        }
+
+                        .name {
+                            @include MB {
+                                font-size: m(9);
+                                line-height: m(9);
+                                margin-top: m(2);
+                            }
+
+                            font-size: p(16);
+                            font-weight: 500;
+                            line-height: p(19);
+                            margin-top: p(2);
+                        }
+
+                        .category {
+                            @include MB {
+                                gap: m(2);
+                                line-height: 0;
+                                margin-top: m(2);
+                            }
+
+                            display: flex;
+                            flex-direction: column;
+                            gap: p(4);
+                            line-height: 0;
+                            margin-top: p(7);
+
+                            .text {
+                                span {
+                                    @include MB {
+                                        font-size: m(6);
+                                        padding: m(1) m(13);
+                                        border-radius: m(4);
+                                        font-weight: normal;
+                                        line-height: m(9);
+                                    }
+
+                                    display: inline-block;
+                                    background: linear-gradient(
+                                        90deg,
+                                        rgba(227, 32, 104, 0.5) 2.44%,
+                                        rgba(245, 0, 59, 0.5) 100%
+                                    );
+                                    border-radius: p(5);
+                                    padding: p(3) p(14);
+                                    color: white;
+                                    font-size: p(8);
+                                    font-weight: 500;
+                                    line-height: p(9);
+                                    position: relative;
+
+                                    &::before {
+                                        @include MB {
+                                            width: m(4);
+                                            height: m(4);
+                                            left: m(6);
+                                            top: m(3);
+                                        }
+
+                                        position: absolute;
+                                        content: "";
+                                        width: p(4);
+                                        height: p(4);
+                                        border-radius: 150%;
+                                        background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                                        left: p(6);
+                                        top: p(5);
+                                    }
+                                }
+                            }
+                        }
+
+                        .description {
+                            @include MB {
+                                display: none;
+                            }
+                            font-size: p(10);
+                            font-weight: 300;
+                            line-height: p(12);
+                            margin-top: p(4);
+                        }
+
+                        .info_10 {
+                            @include MB {
+                                display: none;
+                            }
+                            display: flex;
+                            align-items: center;
+                            gap: p(7);
+                            font-size: p(8);
+                            line-height: p(9);
+                            color: #343846;
+                            margin-top: p(4);
+
+                            .image_12 {
+                                width: p(8);
+                            }
+
+                            .text_12 {
+                                transform: translateY(p(1));
+                            }
+
+                            .date_11 {
+                                display: flex;
+                                align-items: center;
+                                gap: p(5);
+                            }
+
+                            .user_11 {
+                                display: flex;
+                                align-items: center;
+                                gap: p(5);
+                                .image_12 {
+                                    width: p(6.41);
+                                }
+                            }
+
+                            .rate_11 {
+                                display: flex;
+                                align-items: center;
+                                gap: p(1.33);
+
+                                .text_12 {
+                                    margin-left: p(3);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

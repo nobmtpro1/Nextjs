@@ -1,0 +1,106 @@
+@import "general";
+
+.list {
+    @include MB {
+        display: none;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include box-shadow();
+    padding: 2vw 6vw;
+    margin-top: 2vw;
+    font-size: 1.24vw;
+    font-weight: 500;
+    border-radius: 1vw;
+    margin-left: 16vw;
+    margin-right: 16vw;
+
+    .left {
+        flex: 17;
+        color: #747474;
+    }
+
+    .right {
+        flex: 83;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.82vw;
+
+        .text {
+            cursor: pointer;
+        }
+        .active {
+            color: rgba(227, 32, 104, 1);
+        }
+    }
+}
+
+.items {
+    @include MB {
+        padding-right: 6vw;
+        padding-left: 6vw;
+    }
+
+    margin-top: 0.25vw;
+    padding-left: 22vw;
+    padding-right: 22vw;
+    .item {
+        @include MB {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 4vw;
+        padding-bottom: 4.3vw;
+
+        &:not(:last-child) {
+            border-bottom: 1px rgba(52, 56, 70, 1) solid;
+        }
+
+        .left {
+            @include MB {
+                font-size: 15.45vw;
+            }
+
+            flex: 17;
+            font-weight: 500;
+            font-size: 3.32vw;
+            .active {
+                color: rgba(227, 32, 104, 1);
+            }
+        }
+
+        .right {
+            @include MB {
+                grid-template-columns: 1fr;
+            }
+
+            flex: 83;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            font-size: 0.93vw;
+
+            .glossary {
+                @include MB {
+                    grid-template-columns: 1fr;
+                    font-size: 3.86vw;
+                    margin-bottom: 2.65vw;
+                }
+                margin-bottom: 0.3vw;
+                a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    color: black !important;
+                }
+            }
+        }
+    }
+}

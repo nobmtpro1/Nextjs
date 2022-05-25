@@ -1,0 +1,115 @@
+@import "./elearning_detail_session.module.scss";
+
+.session_page_div2 {
+    .box_container:nth-child(3) {
+        @include MB {
+            height: m(330);
+        }
+        .box {
+            height: 100%;
+            position: relative;
+
+            .cerfiticate_slide {
+                @include MB {
+                    width: 89%;
+                    bottom: m(250);
+                    left: m(20);
+                }
+                width: 90%;
+                position: absolute;
+                bottom: p(250);
+                left: p(12);
+                transform: translateY(100%);
+
+                .slide {
+                    @include MB {
+                        padding: m(12);
+                        padding-left: m(10);
+                    }
+
+                    padding: p(10);
+                    padding-right: 0;
+
+                    .slide_container {
+                        @include MB {
+                            width: m(154);
+                            border-radius: m(10);
+                            padding: m(7.06);
+                            padding-bottom: m(9.7);
+                            margin-top: m(8);
+                            box-shadow: rgba(0, 0, 0, 0.24) 0px m(3) m(8);
+                        }
+
+                        box-shadow: rgba(0, 0, 0, 0.24) 0px p(3) p(8);
+                        border-radius: p(10);
+                        padding: p(3);
+                        position: relative;
+                        margin-top: p(16);
+                        width: p(120);
+                        .image {
+                            img {
+                                border-radius: p(10);
+                            }
+                        }
+
+                        .name {
+                            @include MB {
+                                font-size: m(14);
+                                margin-top: m(7.15);
+                                margin-bottom: m(12.5);
+                            }
+
+                            font-size: p(13);
+                            font-weight: 500;
+                            line-height: 100%;
+                            margin-top: p(4);
+                            margin-bottom: p(10);
+                        }
+
+                        .button {
+                            position: relative;
+                            bottom: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            a {
+                                @include MB {
+                                    border-radius: m(5);
+                                    font-size: m(14);
+                                    height: m(32);
+                                }
+
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background: linear-gradient(135deg, #e32068 0%, #f5003b 100%);
+                                border-radius: p(5);
+                                color: white;
+                                font-size: p(12);
+                                font-weight: 500;
+                                height: p(30);
+                                width: 95%;
+                                margin-bottom: p(3);
+
+                                .button_image {
+                                    @include MB {
+                                        width: m(14);
+                                        height: m(14);
+                                        transform: translateY(m(-1));
+                                        margin-right: m(5);
+                                    }
+
+                                    width: p(14);
+                                    height: p(14);
+                                    transform: translateY(p(-1));
+                                    margin-right: p(5);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

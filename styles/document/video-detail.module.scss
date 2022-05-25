@@ -1,0 +1,62 @@
+@import "./test-detail.module.scss";
+
+.main {
+    .left{
+        &>.image{
+            @include PC{
+                display: none;
+            }
+            display: block;
+            &::after {
+                @include MB {
+                    background-size: 11.59vw 11.59vw;
+                }
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                background: url("/images/document-video-detail-play.png");
+                background-size: 2.5vw 2.5vw;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 2.41vw;
+                color: white;
+                font-size: 1.24vw;
+            }
+        }
+    }
+    .right {
+        .image {
+            display: block;
+
+            &::after {
+                @include MB {
+                    background-size: 11.59vw 11.59vw;
+                }
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";
+                background: url("/images/document-video-detail-play.png");
+                background-size: 2.5vw 2.5vw;
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 2.41vw;
+                color: white;
+                font-size: 1.24vw;
+            }
+        }
+    }
+}

@@ -1,0 +1,128 @@
+@import 'general';
+.menu_mb {
+    @include PC {
+        display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-left: 0;
+        margin-top: 3vw;
+    }
+
+    li {
+        display: flex;
+        gap: 7.97vw;
+        width: 100%;
+        min-height: 8.69vw;
+        padding: 1.93vw 10.38vw;
+        font-size: 3.86vw;
+        font-weight: 500;
+        position: relative;
+
+        .image1,
+        .image2 {
+            width: 5.31vw;
+            img {
+                -webkit-filter: grayscale(100%);
+            }
+        }
+
+        .text1,
+        .text2 {
+            transform: translateY(0.5vw);
+            color: black;
+        }
+
+        &.dropdown {
+            &::before {
+                position: absolute;
+                content: "";
+                width: 2.41vw;
+                height: 2.41vw;
+                right: 10.38vw;
+                top: 3.93vw;
+                background: url("/images/account-header-dropdown-black.svg");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &.dropdown.active {
+            &::before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    .li1 {
+        &:not(:last-child) {
+            border-bottom: 0.24vw black solid;
+        }
+
+        &.active {
+            .image1 {
+                img {
+                    -webkit-filter: grayscale(5%);
+                }
+            }
+            .text1 {
+                @include text-gradient;
+                .ul2 {
+                    display: block;
+                    .li2 {
+                        .text2 {
+                            // -webkit-text-fill-color: black;
+                        }
+                    }
+                }
+            }
+
+            &.dropdown {
+                .image1 {
+                    img {
+                        -webkit-filter: grayscale(100%);
+                    }
+                }
+                .text1 {
+                    background: black;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    .ul2 {
+                        display: block;
+                        .li2 {
+                            .text2 {
+                                -webkit-text-fill-color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .text1 {
+            .ul2 {
+                display: none;
+                .li2 {
+                    padding-left: 0 !important;
+                    padding-right: 0 !important;
+                    &.active {
+                        .image2 {
+                            img {
+                                -webkit-filter: grayscale(5%);
+                            }
+                        }
+                        .text2 {
+                            background: linear-gradient(135deg, #e32068 0%, #f5003b 100%) !important;
+                            -webkit-background-clip: text !important;
+                            -webkit-text-fill-color: transparent !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
